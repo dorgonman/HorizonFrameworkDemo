@@ -15,7 +15,7 @@ master branch may be unstable since it is in development, please switch to tags,
 </h2>
 ----------------------------------------------  
 
- The goal of this plugin is to provide a general game framework that can manage UMG widget and related game logic with more organized way.
+ The goal of this plugin is to provide a general game framework that can manage WidgetBlueprints and related game logic with more organized way.
 
 -----------------------  
 System Requirements
@@ -63,6 +63,8 @@ What does your plugin do/What is the intent of your plugin
 * AHorizonScene is inherited from AHorizonSceneBase with VR support that will check if game is running in VR mode, if game is running in VR mode, then plugin will use WidgetComponent to display Widget instead of calling AddToViewport.
 
 * AHorizonTutorialSystem is a simple tutorial framework intend to create step by step task.
+
+* UHorizonStaticMeshComponent: StaticMeshComponent that will generate dynamic material automatically.
 
 -----------------------
 Contact and Support
