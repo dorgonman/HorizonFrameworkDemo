@@ -52,7 +52,7 @@ Platforms Tested: Windows
 
 Demo Project: https://github.com/dorgonman/HorizonFrameworkDemo
 
-DemoVideo: 
+DemoVideo: https://youtu.be/TQ3oFkdn2Pg
 
 -----------------------
 What does your plugin do/What is the intent of your plugin
