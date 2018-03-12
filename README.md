@@ -9,7 +9,7 @@ master branch may be unstable since it is in development, please switch to tags,
 ----------------------------------------------  
 <h2 align="center">				
 			HorizonFrameworkPlugin<br>
-					4.18.0   <br>
+					4.19.0   <br>
 			http://dorgon.horizon-studio.net  <br>
 				dorgonman@hotmail.com  <br>
 </h2>
