@@ -77,5 +77,8 @@ email: dorgonman@hotmail.com
  Version History
 -----------------------  
 
+*4.19.0
+- Refactor
+
 *4.18.0
  - NEW: First Version including core features.
