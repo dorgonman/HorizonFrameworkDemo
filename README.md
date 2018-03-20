@@ -78,6 +78,7 @@ email: dorgonman@hotmail.com
 -----------------------  
 
 *4.19.0
+- FIX: HorizonScene's WidgetComponent bugs in VR Mode.
 - Refactor
 
 *4.18.0
