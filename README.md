@@ -76,7 +76,9 @@ email: dorgonman@hotmail.com
 -----------------------
  Version History
 -----------------------  
-
+*4.19.2
+	New: Param warning in HorizonScene's animation name DropDown list if param name not found
+	Fix: Add WhitelistPlatform for IOS and HTML5
 *4.19.0
 - FIX: HorizonScene's WidgetComponent bugs in VR Mode.
 - Refactor
