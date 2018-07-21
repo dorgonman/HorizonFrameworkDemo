@@ -9,7 +9,7 @@ master branch may be unstable since it is in development, please switch to tags,
 ----------------------------------------------  
 <h2 align="center">				
 			HorizonFrameworkPlugin<br>
-					4.19.0   <br>
+					4.20.0   <br>
 			http://dorgon.horizon-studio.net  <br>
 				dorgonman@hotmail.com  <br>
 </h2>
@@ -20,7 +20,7 @@ master branch may be unstable since it is in development, please switch to tags,
 -----------------------  
 System Requirements
 -----------------------  
-Tested UnrealEngine version: 4.18, 4.19
+Tested UnrealEngine version: 4.18, 4.19, 4.20
 
 
 -----------------------
@@ -76,6 +76,9 @@ email: dorgonman@hotmail.com
 -----------------------
  Version History
 -----------------------  
+*4.20.0
+ Refactor Source Folder
+
 *4.19.2
 	New: Param warning in HorizonScene's animation name DropDown list if param name not found
 	Fix: Add WhitelistPlatform for IOS and HTML5
