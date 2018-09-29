@@ -1,9 +1,27 @@
-VSTS Build Status: ![VSTS Build Status](https://hsgame.visualstudio.com/_apis/public/build/definitions/aeaa314b-7b56-4733-89fa-67e9bccfb809/7/badge)
+![VSTS CI status](https://hsgame.visualstudio.com/_apis/public/build/definitions/aeaa314b-7b56-4733-89fa-67e9bccfb809/7/badge)
+
+public feed: nuget.org  
+
+[![nuget.org package in feed in ](https://img.shields.io/nuget/v/UE4Editor-HorizonFrameworkDemo.svg)](https://www.nuget.org/packages/UE4Editor-HorizonFrameworkDemo/)
+
+private feed(only for internal use): 
+
+[![Azure Artifacts package in  feed in ](https://hsgame.feeds.visualstudio.com/_apis/public/Packaging/Feeds/d5ed5eb7-dd62-4af0-a6a4-8862be2b9f7f/Packages/170234ae-8282-419c-a715-950d0ea63479/Badge)](https://hsgame.visualstudio.com/_Packaging?feed=d5ed5eb7-dd62-4af0-a6a4-8862be2b9f7f&package=170234ae-8282-419c-a715-950d0ea63479&preferRelease=true&_a=package)
 
 
 Note: 
 
-master branch may be unstable since it is in development, please switch to tags, for example: release/4.18.0
+master branch may be unstable since it is in development, please switch to tags, for example: release/4.20.0
+
+
+
+----------------------------------------------  
+How to Run Demo Project before purchase:(Only for Win64 editor build, no source code)
+1. [Download nuget executable](https://www.nuget.org/downloads) and copy the exe into C:\Windows\system32\ or any place listed in your PATH environment.
+2. Double click install_package_from_nuget.org.bat, and check if UE4Editor-*.dll are installed to Binaries\Win64 and Plugins\HorizonFrameworkPlugin\Binaries\Win64\
+3. Double click HorizonFrameworkDemo.uproject  
+----------------------------------------------
+
 
 
 ----------------------------------------------  
