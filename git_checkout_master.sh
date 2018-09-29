@@ -7,5 +7,5 @@ git submodule foreach --recursive "git pull"
 
 pushd ci_scripts/nuget/
 
-./install_nuget_package_local.sh
+./install_package_from_hsgame-locall.sh
 popd 
