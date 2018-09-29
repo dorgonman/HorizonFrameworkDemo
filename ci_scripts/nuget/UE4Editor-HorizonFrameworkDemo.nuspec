@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>UE4Editor-HorizonFrameworkDemo</id>
+    <version>0.0.0.1</version>
+    <authors>dorgon.chang</authors>
+    <owners>dorgon.chang</owners>
+    <licenseUrl>http://dorgon.horizon-studio.net</licenseUrl>
+    <projectUrl>https://github.com/dorgonman/HorizonFrameworkDemo</projectUrl>
+    <iconUrl>https://github.com/dorgonman/HorizonFrameworkDemo</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>HorizonFramework Demo Project Editor dll, no source code, only for Win64 editor</description>
+    <releaseNotes>https://github.com/dorgonman/HorizonFrameworkDemo</releaseNotes>
+    <copyright>Copyright 2018</copyright>
+    <tags>Native Cpp UE4 Editor Demo</tags>
+    <dependencies>
+    </dependencies>
+        <!-- A readme.txt to display when the package is installed -->
+  </metadata>
+  <files>
+        <file src="Binaries/Win64/UE4Editor**" target="" />
+        <file src="Plugins/**/Binaries/Win64/UE4Editor**" target="" />
+        <file src="Plugins/**/Config/**" target="" />
+        <file src="Plugins/**/Resources/**" target="" />
+        <file src="Plugins/**/**.uplugin" target="" />
+  </files>
+</package>
