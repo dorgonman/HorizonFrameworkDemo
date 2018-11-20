@@ -14,7 +14,7 @@ private feed(only for internal use):
 
 Note: 
 
-master branch may be unstable since it is in development, please switch to tags, for example: release/4.21.0
+master branch may be unstable since it is in development, please switch to tags, for example: release/4.21.1
 
 
 
@@ -30,7 +30,7 @@ How to Run Demo Project before purchase:(Only for Win64 editor build, no source 
 ----------------------------------------------  
 <h2 align="center">				
 			HorizonFrameworkPlugin<br>
-					4.21.0   <br>
+					4.21.1   <br>
 			http://dorgon.horizon-studio.net  <br>
 				dorgonman@hotmail.com  <br>
 </h2>
@@ -97,6 +97,9 @@ email: dorgonman@hotmail.com
 -----------------------
  Version History
 -----------------------  
+*4.21.1
+	BugFix: UserWidget and Scene are created twice
+	New: [HorizonFrameworkFunctionLibrary] SetComponentRotationToPlayer
 
 *4.21.0
 
