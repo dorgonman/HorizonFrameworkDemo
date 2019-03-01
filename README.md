@@ -98,10 +98,14 @@ email: dorgonman@hotmail.com
  Version History
 -----------------------  
 *4.21.1
-	BugFix: UserWidget and Scene are created twice
-	New: [HorizonFrameworkFunctionLibrary] SetComponentRotationToPlayer
-	BugFix: [HorizonSceneBase] IsUserWidgetAnimationFinished when animName not found
 
+	BugFix: UserWidget and Scene are created twice  
+
+	New: [HorizonFrameworkFunctionLibrary] SetComponentRotationToPlayer  
+
+	BugFix: [HorizonSceneBase] IsUserWidgetAnimationFinished when animName not found  
+	
+ 
 *4.21.0
 
 	New: [AHorizonSceneManager] Add GetSceneEventList, GetSceneManagerOfClass and GetSceneManagerByTag.  
