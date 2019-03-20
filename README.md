@@ -1,7 +1,7 @@
 [Marketplace](https://www.unrealengine.com/marketplace/horizonframework-plugin) 
 
 
-![Azure Devops](https://hsgame.visualstudio.com/UE4HorizonPlugin/_apis/build/status/HorizonFrameworkPluginDemo-CI)
+<!-- ![Azure Devops](https://hsgame.visualstudio.com/UE4HorizonPlugin/_apis/build/status/HorizonFrameworkPluginDemo-CI)
 
 public feed: nuget.org  
 
@@ -9,20 +9,21 @@ public feed: nuget.org
 
 private feed(only for internal use): 
 
-[![Azure Artifacts package in  feed in ](https://hsgame.feeds.visualstudio.com/_apis/public/Packaging/Feeds/d5ed5eb7-dd62-4af0-a6a4-8862be2b9f7f/Packages/170234ae-8282-419c-a715-950d0ea63479/Badge)](https://hsgame.visualstudio.com/_Packaging?feed=d5ed5eb7-dd62-4af0-a6a4-8862be2b9f7f&package=170234ae-8282-419c-a715-950d0ea63479&preferRelease=true&_a=package)
+[![Azure Artifacts package in  feed in ](https://hsgame.feeds.visualstudio.com/_apis/public/Packaging/Feeds/d5ed5eb7-dd62-4af0-a6a4-8862be2b9f7f/Packages/170234ae-8282-419c-a715-950d0ea63479/Badge)](https://hsgame.visualstudio.com/_Packaging?feed=d5ed5eb7-dd62-4af0-a6a4-8862be2b9f7f&package=170234ae-8282-419c-a715-950d0ea63479&preferRelease=true&_a=package) -->
 
 
 Note: 
 
-master branch may be unstable since it is in development, please switch to tags, for example: release/4.21.1
+master branch may be unstable since it is in development, please switch to tags, for example: release/4.22.0
 
 
 
 ----------------------------------------------  
 How to Run Demo Project before purchase:(Only for Win64 editor build, no source code)
 1. [Download nuget executable](https://www.nuget.org/downloads) and copy the exe into C:\Windows\system32\ or any place listed in your PATH environment.
-2. Double click install_package_from_nuget.org.bat, and check if UE4Editor-*.dll are installed to Binaries\Win64 and Plugins\HorizonFrameworkPlugin\Binaries\Win64\
-3. Double click HorizonFrameworkDemo.uproject  
+2. Install [Git for Windows](https://gitforwindows.org/)
+3. Double click install_package_from_nuget.org.bat, and check if UE4Editor-*.dll are installed to Binaries\Win64 and Plugins\HorizonFrameworkPlugin\Binaries\Win64\
+4. Double click HorizonFrameworkDemo.uproject  
 ----------------------------------------------
 
  
@@ -30,7 +31,7 @@ How to Run Demo Project before purchase:(Only for Win64 editor build, no source 
 ----------------------------------------------  
 <h2 align="center">				
 			HorizonFrameworkPlugin<br>
-					4.21.1   <br>
+					4.22.0   <br>
 			http://dorgon.horizon-studio.net  <br>
 				dorgonman@hotmail.com  <br>
 </h2>
@@ -41,7 +42,7 @@ How to Run Demo Project before purchase:(Only for Win64 editor build, no source 
 -----------------------  
 System Requirements
 -----------------------  
-Supported UnrealEngine version: 4.18-4.21
+Supported UnrealEngine version: 4.18-4.22
 
 
 -----------------------
@@ -97,6 +98,16 @@ email: dorgonman@hotmail.com
 -----------------------
  Version History
 -----------------------  
+
+*4.22.0
+
+	BugFix: UserWidget and Scene are created twice  
+
+	New: [HorizonFrameworkFunctionLibrary] SetComponentRotationToPlayer  
+
+	BugFix: [HorizonSceneBase] IsUserWidgetAnimationFinished when animName not found  
+
+
 *4.21.1
 
 	BugFix: UserWidget and Scene are created twice  

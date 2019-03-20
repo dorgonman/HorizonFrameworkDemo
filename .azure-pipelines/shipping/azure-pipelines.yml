@@ -1,0 +1,42 @@
+name: $(Date:yyyyMMdd).$(Rev:.r)
+
+trigger:
+  batch: true
+  branches:
+    include:
+      - master
+  paths:
+    include:
+      - Source/*
+      - Plugins/*
+      - Content/*
+      - /*.uproject
+
+variables:
+    - name: Pipeline.EngineVersion 
+      value: '0.0.0.0'
+    - name: Pipeline.ProjectVersion
+      value: '0.0.0.0'
+    - name:  Pipeline.GameProjectRoot
+      value: '.'
+    - name: Pipeline.ArchivePath
+      value: '$(Pipeline.GameProjectRoot)/Intermediate/BuildArchive/'
+
+
+# ==================settable variable at queue time=============
+#   PipelineInput.bCleanSCM: true
+
+resources:
+  repositories:
+    - repository: templates
+      type: git
+      name: UEHorizonBuildScript/azure-pipelines-template
+
+# verify-plugin-build
+jobs:
+    #- ${ if eq(variables['Pipeline.bBuildWin64'], 'true') }:
+
+    - template: job/verify-plugin-build.yml@templates
+
+
+    #git push --mirror $(Parameters.github_push_mirror_url)

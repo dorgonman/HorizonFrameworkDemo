@@ -1,0 +1,65 @@
+name: $(Date:yyyyMMdd).$(Rev:.r)
+
+trigger:
+  batch: true
+  branches:
+    include:
+      - master
+  paths:
+    include:
+      - Source/*
+      - Plugins/*
+      - ./*.uproject
+
+variables:
+    - name: Pipeline.EngineVersion 
+      value: '0.0.0.0'
+    - name: Pipeline.ProjectVersion
+      value: '0.0.0.0'
+    - name:  Pipeline.GameProjectRoot
+      value: '.'
+    - name: Pipeline.ArchivePath
+      value: '$(Pipeline.GameProjectRoot)/Intermediate/BuildArchive/'
+    - name: Pipeline.bNugetVersionAlreadyPushed
+      value: 'false'
+    - name: Pipeline.NugetLocalFeedPath
+      value: '\\\\hsgame\\UE4-Packaged-build\\nuget\\hsgame-local\\HorizonPlugin'
+    - name: Pipeline.NugetAzureDevopsFeedName
+      value: 'UE4HorizonPlugin'
+    - name: Pipeline.NugetOutputDirectory
+      value: '$(System.ArtifactsDirectory)/Nuget'
+
+# ==================settable variable at queue time=============
+#   PipelineInput.bCleanSCM: true
+
+resources:
+  repositories:
+    - repository: templates
+      type: git
+      name: UEHorizonBuildScript/azure-pipelines-template
+
+jobs:
+    #- ${ if eq(variables['Pipeline.bBuildWin64'], 'true') }:
+    - template: job/build-game-editor.yml@templates
+      parameters:
+          name: 'Build_Win64_GameEditor'
+          group: 'ue4-build-var-win-group'
+          pool: 'Default'
+          platform: 'win64'
+
+    - template: job/build-game-editor.yml@templates
+      parameters:
+          name: 'Build_Mac_GameEditor'
+          group: 'ue4-build-var-mac-group'
+          pool: 'Default-MacOS'
+          platform: 'mac'
+
+    - template: job/create-and-push-nuget-package.yml@templates
+      parameters:
+          name: 'Create_And_Push_Nuget_Package'
+          group: 'ue4-build-var-win-group'
+          pool: 'Default'
+          platform: 'win64'
+          dependsOn:
+            - 'Build_Win64_GameEditor'
+            - 'Build_Mac_GameEditor'
