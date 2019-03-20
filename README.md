@@ -1,15 +1,15 @@
 [Marketplace](https://www.unrealengine.com/marketplace/horizonframework-plugin) 
 
 
-<!-- ![Azure Devops](https://hsgame.visualstudio.com/UE4HorizonPlugin/_apis/build/status/HorizonFrameworkPluginDemo-CI)
+[![Build Status](https://hsgame.visualstudio.com/UE4HorizonPlugin/_apis/build/status/HorizonFramework/HorizonFrameworkDemo-Shipping-CI?branchName=master)](https://hsgame.visualstudio.com/UE4HorizonPlugin/_build/latest?definitionId=28&branchName=master)
 
 public feed: nuget.org  
 
-[![nuget.org package in feed in ](https://img.shields.io/nuget/v/UE4Editor-HorizonFrameworkDemo.svg)](https://www.nuget.org/packages/UE4Editor-HorizonFrameworkDemo/)
+[![nuget.org package in feed in ](https://img.shields.io/nuget/v/HorizonFrameworkDemo.svg)](https://www.nuget.org/packages/HorizonFrameworkDemo/)
 
 private feed(only for internal use): 
 
-[![Azure Artifacts package in  feed in ](https://hsgame.feeds.visualstudio.com/_apis/public/Packaging/Feeds/d5ed5eb7-dd62-4af0-a6a4-8862be2b9f7f/Packages/170234ae-8282-419c-a715-950d0ea63479/Badge)](https://hsgame.visualstudio.com/_Packaging?feed=d5ed5eb7-dd62-4af0-a6a4-8862be2b9f7f&package=170234ae-8282-419c-a715-950d0ea63479&preferRelease=true&_a=package) -->
+<!-- [![Azure Artifacts package in  feed in ](https://hsgame.feeds.visualstudio.com/_apis/public/Packaging/Feeds/d5ed5eb7-dd62-4af0-a6a4-8862be2b9f7f/Packages/170234ae-8282-419c-a715-950d0ea63479/Badge)](https://hsgame.visualstudio.com/_Packaging?feed=d5ed5eb7-dd62-4af0-a6a4-8862be2b9f7f&package=170234ae-8282-419c-a715-950d0ea63479&preferRelease=true&_a=package) -->
 
 
 Note: 

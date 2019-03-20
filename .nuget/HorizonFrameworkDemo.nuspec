@@ -9,7 +9,7 @@
     <projectUrl>https://github.com/dorgonman/HorizonFrameworkDemo</projectUrl>
     <iconUrl>https://i.imgur.com/8dfwtEQ.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>HorizonVR Plugin Demo Project Editor dll, no source code, only for Win64 and mac editor</description>
+    <description>HorizonFramework Plugin Demo Project Editor dll, no source code, only for Win64 and mac editor</description>
     <releaseNotes>https://github.com/dorgonman/HorizonFrameworkDemo</releaseNotes>
     <copyright>Copyright 2019</copyright>
     <tags>Native Cpp UE4 Editor Demo</tags>
