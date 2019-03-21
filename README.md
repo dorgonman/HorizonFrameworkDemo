@@ -9,7 +9,7 @@ public feed: nuget.org
 
 private feed(only for internal use): 
 
-<!-- [![Azure Artifacts package in  feed in ](https://hsgame.feeds.visualstudio.com/_apis/public/Packaging/Feeds/d5ed5eb7-dd62-4af0-a6a4-8862be2b9f7f/Packages/170234ae-8282-419c-a715-950d0ea63479/Badge)](https://hsgame.visualstudio.com/_Packaging?feed=d5ed5eb7-dd62-4af0-a6a4-8862be2b9f7f&package=170234ae-8282-419c-a715-950d0ea63479&preferRelease=true&_a=package) -->
+[![HorizonFrameworkDemo package in UE4HorizonPlugin feed in Azure Artifacts](https://hsgame.feeds.visualstudio.com/_apis/public/Packaging/Feeds/319fdc64-73ff-4910-b3b8-2ee206a67a49/Packages/5098845a-f9dd-48c2-a996-f5fc69389226/Badge)](https://hsgame.visualstudio.com/UE4HorizonPlugin/_packaging?_a=package&feed=319fdc64-73ff-4910-b3b8-2ee206a67a49&package=5098845a-f9dd-48c2-a996-f5fc69389226&preferRelease=true)
 
 
 Note: 
