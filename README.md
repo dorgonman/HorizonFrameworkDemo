@@ -99,6 +99,16 @@ email: dorgonman@hotmail.com
  Version History
 -----------------------  
 
+*4.23.0
+
+	New: [UHorizonFrameworkFunctionLibrary] ShouldDisplayTouchInterface  
+
+	Refactor: [HorizonSceneManager] Implement PlayerIndex for CreateWidget  
+	     
+	Refactor: Deprecated Default Functions  
+
+	BugFix: Fix UHorizonFrameworkFunctionLibrary::GetUserWidgetAnimation Crash  
+
 *4.22.0
 
 	BugFix: UserWidget and Scene are created twice  
