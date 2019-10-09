@@ -1,40 +1,41 @@
 #!/bin/bash
 set -e
+basePath=$(cd "$(dirname "$0")"; pwd)
+projectRoot=$(cd "${basePath}/../"; pwd)
 pushd ..
-    PROJECT_FILE_NAME=$(find *.uproject)
-    PROJECT_NAME=${PROJECT_FILE_NAME%.*}
-popd
-export PACKAGE_NAME=${PROJECT_NAME}
-export FEED_NAME=$1
-export OUTPUT_DIRECTORY=$(cd ../../; pwd)
+    projectFileName=$(find *.uproject)
+    projectName=${projectFileName%.*}
 
-echo OUTPUT_DIRECTORY: ${OUTPUT_DIRECTORY}
-echo PACKAGE_NAME: ${PACKAGE_NAME}
+    NUGET=${projectRoot}/ue_ci_scripts/bin/Win64/nuget/nuget
+    if [ -f "$NUGET" ]
+    then
+        NUGET=nuget
+    fi
+popd
+packageName=${projectName}
+
+export outputDirectory=$(cd ../../; pwd)
+
+echo outputDirectory: ${outputDirectory}
+echo packageName: ${packageName}
 echo FEED_NAME: ${FEED_NAME}
-pushd ${OUTPUT_DIRECTORY}/${PACKAGE_NAME}
+pushd ${projectRoot}
     git fetch --prune --tags origin
     git tag -l --points-at HEAD
-    export PACKAGE_VERISON=$(git tag -l --points-at HEAD | grep -a "editor/hsgame/" | grep -Eo '[.0-9]*{1,9}')
+    packageVersion=$(git tag -l --points-at HEAD | grep -a "editor" | grep -Eo '[.0-9]*{1,9}') || true
 popd
 
 
-if [ -n "${PACKAGE_VERISON}" ]; then
-    INSTALL_VERSION="-Version ${PACKAGE_VERISON}"
-
+if [ -n "${packageVersion}" ]; then
+    installVersion="-Version ${packageVersion}"
 else
-    INSTALL_VERSION=' '
-    # echo "[Error] Can't find nuget version tag here:"
-    # echo "[Error] ${OUTPUT_DIRECTORY}/${PACKAGE_NAME}"
-    # pushd ${OUTPUT_DIRECTORY}/${PACKAGE_NAME}  > /dev/null
-    #     info=$(git show --oneline -s)
-    #     echo "[Error] ${info}"
-    # popd > /dev/null
-    # exit 1 
+    echo "[Info] can't find packageVersion, will install latest"
+    installVersion=' '
 fi
 
 cmd=" \
-    nuget install ${PACKAGE_NAME} ${INSTALL_VERSION} \
-    -OutputDirectory ${OUTPUT_DIRECTORY} -PackageSaveMode nuspec \
+    ${NUGET} install ${packageName} ${installVersion} \
+    -OutputDirectory ${outputDirectory} -PackageSaveMode nuspec \
     -Source ${FEED_NAME} \
     -ExcludeVersion -ForceEnglishOutput  \
     "
