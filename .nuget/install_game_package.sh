@@ -7,14 +7,18 @@ pushd ..
     projectName=${projectFileName%.*}
 
     NUGET=${projectRoot}/ue_ci_scripts/bin/Win64/nuget/nuget
-    if [ -f "$NUGET" ]
+    if [ ! -f "$NUGET" ]
     then
         NUGET=nuget
     fi
 popd
 packageName=${projectName}
 
-export outputDirectory=$(cd ../../; pwd)
+
+outputDirectory="../Intermediate/NuGetCache/"
+mkdir -p ${outputDirectory}
+outputDirectory=$(cd ${outputDirectory};pwd)
+
 
 echo outputDirectory: ${outputDirectory}
 echo packageName: ${packageName}
@@ -37,8 +41,24 @@ cmd=" \
     ${NUGET} install ${packageName} ${installVersion} \
     -OutputDirectory ${outputDirectory} -PackageSaveMode nuspec \
     -Source ${FEED_NAME} \
-    -ExcludeVersion -ForceEnglishOutput  \
+    -ForceEnglishOutput  \
     "
-#-Verbosity detailed
+#-ExcludeVersion -Verbosity detailed
 echo ${cmd}
 eval ${cmd} 
+
+
+if [ "${installVersion}" != ' ' ]; then
+    nugetFolder=../Intermediate/NugetCache/${packageName}.${packageVersion}
+    
+    echo "Using current nuget pacakge from cache:"
+else
+    nugetFolder=$(ls -d -- ../Intermediate/NugetCache/* | tail -n 1)
+    echo "Using latest nuget pacakge from cache:"
+fi
+
+nugetFolder=$(cd ${nugetFolder}; pwd)
+echo "${nugetFolder}"
+cmd="cp -rf ${nugetFolder}/* ${projectRoot}"
+echo ${cmd}
+eval ${cmd}

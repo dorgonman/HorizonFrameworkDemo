@@ -12,3 +12,4 @@ Saved
 *.xcworkspace
 /.vs
 *.nupkg
+/HorizonFrameworkDemo.nuspec
