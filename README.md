@@ -14,7 +14,7 @@ private feed(only for internal use):
 
 Note: 
 
-master branch may be unstable since it is in development, please switch to tags, for example: release/4.22.0
+master branch may be unstable since it is in development, please switch to tags, for example: editor/4.24.0
 
 
 
@@ -31,7 +31,7 @@ How to Run Demo Project before purchase:(Only for Win64 editor build, no source 
 ----------------------------------------------  
 <h2 align="center">				
 			HorizonFrameworkPlugin<br>
-					4.23.0   <br>
+					4.24.0   <br>
 			http://dorgon.horizon-studio.net  <br>
 				dorgonman@hotmail.com  <br>
 </h2>
@@ -98,6 +98,10 @@ email: dorgonman@hotmail.com
 -----------------------
  Version History
 -----------------------  
+
+*4.24.0 
+
+	Update to 4.24
 
 *4.23.0
 

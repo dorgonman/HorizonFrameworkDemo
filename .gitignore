@@ -13,3 +13,5 @@ Saved
 /.vs
 *.nupkg
 /HorizonFrameworkDemo.nuspec
+/Build/WindowsNoEditor/FileOpenOrder/EditorOpenOrder.log
+/Content/NonUFS/Copy/Game.version

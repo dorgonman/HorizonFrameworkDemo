@@ -5,7 +5,7 @@
 #include "HorizonFrameworkDemoGameModeBase.h"
 
 #include "UObject/ConstructorHelpers.h"
-#include "HorizonTutorialSystem.h"
+#include "Actor/HorizonTutorialSystem.h"
 
 
 
