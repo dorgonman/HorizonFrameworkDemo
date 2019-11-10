@@ -101,7 +101,16 @@ email: dorgonman@hotmail.com
 
 *4.24.0 
 
-	Update to 4.24
+	New: [HorizonSceneManager] Implement RemoveSceneEvent  
+
+	New: [UHorizonFrameworkFunctionLibrary] GetPlayerIndex  
+
+	BugFix:[AHorizonSceneBase] OwningObject should come from PlayerIndex  
+
+	Refactor:[AHorizonSceneBase] Change IsTransInFinished && IsTransOutFinished to BlueprintNativeEvent  
+
+	Refactor: Adjust naming convention  
+
 
 *4.23.0
 
