@@ -52,7 +52,7 @@ Installation Guide
 Put HorizonFrameworkPlugin into YOUR_PROJECT/Plugins folder, 
 and then add module to your project 
 YOUR_PROJECT.Build.cs:
-PublicDependencyModuleNames.AddRange(new string[] { "HorizonFramework"});
+PublicDependencyModuleNames.AddRange(new string[] { "HorizonFramework" });
 
 -----------------------
 User Guide
