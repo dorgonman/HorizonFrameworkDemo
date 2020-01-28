@@ -88,6 +88,50 @@ What does your plugin do/What is the intent of your plugin
 
 * UHorizonStaticMeshComponent: StaticMeshComponent that will generate dynamic material automatically.
 
+
+-----------------------
+User Guide
+-----------------------
+
+example 1: AHorizonScenen::OnStartTransInNative and AHorizonScenen::OnTopToBackNative Callback
+```
+	UCLASS()
+	class UMyUserWidget: public UUserWidget
+	{
+		UPROPERTY(meta = (BindWidgetOptional))
+		UButton* Button_PushOtherScene;
+		UPROPERTY(EditAnywhere, Category = "Scene")
+		TSubclassOf<AHorizonSceneBase> OtherSceneClass;
+	}
+
+	void UMyUserWidget::NativeConstruct()
+	{
+		...
+		Button_PushOtherScene->OnClicked.AddDynamic(this, &ThisClass::OnPushOtherScene);
+		...
+	}
+	void UMyUserWidget::OnPushOtherScene()
+	{
+			auto pSceneManager = UHorizonSceneManagerLibrary::GetDefaultSceneManager(this);
+			int32 playerIndex = UGameplayStatics::GetPlayerControllerID(GetOwningPlayer());
+			auto pSceneEvent = pSceneManager->PushSceneByClass(OtherSceneClass, false, playerIndex);
+			auto pTransInScene = pSceneEvent->GetTransInScene();
+			ensureMsgf(pTransInScene, TEXT("oops! something error"));
+			pTransInScene->OnStartTransInNative.AddLambda([pSceneEvent]()
+			{
+				auto pOtherSceneWidget = Cast<UMyOtherSceneWidget>>(pSceneEvent->GetTransInSceneWidget());
+				pOtherSceneWidget->Setup(false);
+			});
+
+			pTransInScene->OnTopToBackNative.AddLambda([this]() 
+			{
+				auto pOwningPlayer = GetOwningPlayer();
+				UWidgetBlueprintLibrary::SetInputMode_UIOnlyEx(pOwningPlayer, Button_PushOtherScene, EMouseLockMode::DoNotLock);
+			});
+
+	}
+```
+
 -----------------------
 Contact and Support
 -----------------------  
