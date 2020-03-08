@@ -14,7 +14,7 @@ private feed(only for internal use):
 
 Note: 
 
-master branch may be unstable since it is in development, please switch to tags, for example: editor/4.24.0
+master branch may be unstable since it is in development, please switch to tags, for example: editor/4.25.0
 
 
 
@@ -31,7 +31,7 @@ How to Run Demo Project before purchase:(Only for Win64 editor build, no source 
 ----------------------------------------------  
 <h2 align="center">				
 			HorizonFrameworkPlugin<br>
-					4.24.0   <br>
+					4.25.0   <br>
 			http://dorgon.horizon-studio.net  <br>
 				dorgonman@hotmail.com  <br>
 </h2>
@@ -42,7 +42,7 @@ How to Run Demo Project before purchase:(Only for Win64 editor build, no source 
 -----------------------  
 System Requirements
 -----------------------  
-Supported UnrealEngine version: 4.18-4.23
+Supported UnrealEngine version: 4.18-4.25
 
 
 -----------------------
@@ -142,6 +142,19 @@ email: dorgonman@hotmail.com
 -----------------------
  Version History
 -----------------------  
+
+
+*4.25.0 
+
+* AB#1333 [New] GetNumSceneEvent
+
+* AB#1332 [New] bAutoSave flag for ApplicationWillEnterBackground and Shutdown
+
+* [HorizonSceneEvent] GetTransInSceneWidget and GetTransOutSceneWidget
+
+* AB#1112 [New] GetDefaultSceneManager should try find SceneManager in level first before spawn one
+
+
 
 *4.24.0 
 
