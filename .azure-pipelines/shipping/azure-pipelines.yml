@@ -13,14 +13,10 @@ trigger:
       - /*.uproject
 
 variables:
-    - name: Pipeline.EngineVersion 
-      value: '0.0.0.0'
-    - name: Pipeline.ProjectVersion
-      value: '0.0.0.0'
-    - name:  Pipeline.GameProjectRoot
-      value: '.'
-    - name: Pipeline.ArchivePath
-      value: '$(Pipeline.GameProjectRoot)/Intermediate/BuildArchive/'
+  - name:  Pipeline.GameProjectRoot
+    value: '.'
+  - name: Pipeline.ArchivePath
+    value: '$(Pipeline.GameProjectRoot)/Intermediate/BuildArchive/'
 
 
 # ==================settable variable at queue time=============
