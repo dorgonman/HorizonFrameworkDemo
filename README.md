@@ -146,6 +146,30 @@ email: dorgonman@hotmail.com
 
 *4.25.0 
 
+* [UHorizonFrameworkFunctionLibrary] Refactor GetPlayerIndex
+
+* AB#1499 [New][AHorizonSceneManager] Implement IsSceneEventRunning
+
+* AB#1496 [Refactor][UHorizonSceneEvent] Refactor ProcessTransIn and ProcessTransOut
+
+* AB#1496 [New][AHorizonSceneManager] Implement IsEmpty: check SceneEventList and SceneStack
+
+* AB#1495 [New][UHorizonSceneEvent] BlueprintPure for GetTransInScene and GetTransOutScene
+
+* AB#1486 [New][AHorizonSceneManager] Implement CreateScene that the scene will not be managed by SceneManager
+
+* AB#1485 [AHorizonSceneManager] SetVisibilityForAllWidget and Adjust EnableWidget Visibility Toggle
+
+* [Refactor][SceneEvent] Remove Deprecations and remove bGreyOutWhenSceneTransition from PopScene and RemoveScene
+
+* AB#1484 [Refactor]  IsTransInFinished and IsTransOutFinished should check IsAnyAnimationPlaying by default
+
+* AB#1479 [BugFix] Fix ChangeScene and PopScene param setup timing
+
+* AB#1482 [New][UHorizonSceneManagerLibrary] Implement GetSceneManagerWithName
+
+* AB#1479 [BugFix][HorizonScenePushEvent] Fix PopScene didn't pop previous scene correctly
+
 * AB#1333 [New] GetNumSceneEvent
 
 * AB#1332 [New] bAutoSave flag for ApplicationWillEnterBackground and Shutdown
