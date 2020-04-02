@@ -2,7 +2,10 @@
 // email: dorgonman@hotmail.com
 // blog: dorgon.horizon-studio.net
 
+using System;
+using System.IO;
 using UnrealBuildTool;
+using Tools.DotNETCommon;
 
 public class HorizonFrameworkDemo : ModuleRules
 {
@@ -14,6 +17,14 @@ public class HorizonFrameworkDemo : ModuleRules
 
 		PrivateDependencyModuleNames.AddRange(new string[] { "HorizonFramework" });
 
+		string ProjectPath = Path.GetFullPath(Path.Combine(ModuleDirectory, "../../"));
+		if(Target.ProjectFile != null)
+		{
+			ProjectPath = Path.GetDirectoryName(Target.ProjectFile.ToString());
+
+		}
+        // https://docs.unrealengine.com/en-US/Platforms/Mobile/UnrealPluginLanguage/index.html
+        AdditionalPropertiesForReceipt.Add("AndroidPlugin", Path.Combine(ProjectPath, "Source", "Game_UPL.xml"));
 		// Uncomment if you are using Slate UI
 		// PrivateDependencyModuleNames.AddRange(new string[] { "Slate", "SlateCore" });
 		
