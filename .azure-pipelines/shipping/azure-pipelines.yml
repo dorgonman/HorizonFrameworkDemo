@@ -17,8 +17,14 @@ variables:
     value: '.'
 
 
-# ==================settable variable at queue time=============
-#   PipelineInput.bCleanSCM: true
+parameters:
+  - name: bCleanSCM
+    displayName: Pipeline bCleanSCM
+    type: boolean
+    default: false
+    values:
+    - true
+    - false
 
 resources:
   repositories:
@@ -31,13 +37,6 @@ jobs:
     #- ${ if eq(variables['Pipeline.bBuildWin64'], 'true') }:
 
     - template: job/verify-plugin-build.yml@templates
-
-    - template: job/upload-sonarqube.yml@templates
-      parameters:
-          name: 'Upload_SonarQube'
-          group: 'ue4-build-var-win-group'
-          pool: 'Default'
-          platform: 'win64'
-          sonarQubeServerURL: 'http://localhost:9000'
-          sonarQubeCliProjectKey: 'HorizonFrameworkDemo'
-    #git push --mirror $(Parameters.github_push_mirror_url)
+      parameters: 
+          bRunAutomationTest: false
+          bCleanSCM: ${{ parameters.bCleanSCM }}
