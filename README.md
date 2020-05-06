@@ -178,6 +178,16 @@ email: dorgonman@hotmail.com
 
 * AB#1112 [New] GetDefaultSceneManager should try find SceneManager in level first before spawn one
 
+* AB#1573 [New][HorizonSceneManager] Implement PushSceneByClass_SingleInstance: Check is SceneClass already exist be fore push new scene
+
+* [New][HorizonGameInstance] Implement GetLoadingScreenWidget
+
+* AB#1573 [New][HorizonSceneManager] Implement PushSceneByClass_SingleInstance: Check is SceneClass already exist be fore push new scene
+
+* [BugFix][HorizonGameInstance] Fix MySaveGame GCAssumption warning
+
+
+
 
 
 *4.24.0 
