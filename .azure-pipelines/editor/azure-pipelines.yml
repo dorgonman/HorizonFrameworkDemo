@@ -46,7 +46,7 @@ stages:
           pool: 'Default'
           platform: 'win64'
           bCleanSCM: ${{ parameters.bCleanSCM }}
-          checkoutPath: '../../HorizonPlugin/Framework/_01'
+          #checkoutPath: '../../HorizonPlugin/Framework/_01'
 
     - template: job/build-game-editor.yml@templates
       parameters:
