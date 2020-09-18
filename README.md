@@ -31,7 +31,7 @@ How to Run Demo Project before purchase:(Only for Win64 editor build, no source 
 ----------------------------------------------  
 <h2 align="center">				
 			HorizonFrameworkPlugin<br>
-					4.25.0   <br>
+					4.26.0   <br>
 			http://dorgon.horizon-studio.net  <br>
 				dorgonman@hotmail.com  <br>
 </h2>
@@ -42,7 +42,7 @@ How to Run Demo Project before purchase:(Only for Win64 editor build, no source 
 -----------------------  
 System Requirements
 -----------------------  
-Supported UnrealEngine version: 4.18-4.25
+Supported UnrealEngine version: 4.18-4.26
 
 
 -----------------------
@@ -59,8 +59,8 @@ User Guide
 -----------------------  
 1. Create classes that inherited from AHorizonScene
 2. Design your own Widget Blueprint.
-3. Assign Widget Blueprint to HorizonScene's HorizonPlugin|Framework|UI|WidgetClass
-4. Use functions in AHorizonSceneManager, UHorizonSceneManagerLibrary or UHorizonSceneManagerProxy to control HorizonScene
+3. Assign Widget Blueprint to HorizonScene's WidgetClass
+4. Use functions in AHorizonSceneManager, UHorizonSceneManagerLibrary or UHorizonSceneManagerProxy to push, pop or change to your UI Scene.
 
 -----------------------
 Technical Details
@@ -80,13 +80,7 @@ DemoVideo: https://youtu.be/TQ3oFkdn2Pg
 What does your plugin do/What is the intent of your plugin
 -----------------------  
 
-* Because UMG Widget behavior are encapsulated into HorizonScene, so we need to create classes that inherited from AHorizonScene and use funtions in AHorizonSceneManager to determine which widget we want to display in screen. For example ChangeSceneByClass will create widget assigned in HorizonScene; PushSceneByClass will add Widget on the top of other scene; PopScene will remove top widget in SceneStack from screen.
-
-* AHorizonScene is inherited from AHorizonSceneBase with VR support that will check if game is running in VR mode, if game is running in VR mode, then plugin will use WidgetComponent to display Widget instead of calling AddToViewport.
-
-* AHorizonTutorialSystem is a simple tutorial framework intend to create step by step task.
-
-* UHorizonStaticMeshComponent: StaticMeshComponent that will generate dynamic material automatically.
+This plugin is a UI Management Framework that focus on manage your UMG and relate game logic with stack operation, ex: PushScene, PopScene, ChangeScene and ReplaceScene.  
 
 
 -----------------------
@@ -141,7 +135,36 @@ email: dorgonman@hotmail.com
 
 -----------------------
  Version History
------------------------  
+----------------------- 
+
+
+*4.26.0   
+
+* [BugFix][HorizonSceneManager] OnRemoveScene should call OnPopScene if it is TopScene
+
+* [BugFix][HorizonSceneManager] RemoveScene and GetSceneByWidget should check SceneStack and SceneEventList
+
+* [BugFix][HorizonSceneManager] RemoveScene should find target scene from SceneStack
+
+* [BugFix][HorizonSceneManager] HasScene logic
+
+* [Refactor][HorizonSceneBase] Set StatusEnum to EHorizonSceneBaseStatusEnum::Init when init
+
+* [New][HorizonScene] Implement DestroyWidget and set InitWidget to public
+
+* [Refactor][HorizonSceneManager] Deprecate IsEmpty, use HasScene instead
+
+* [BugFix][HorizonSceneManager] IsSceneEventRunning should check current event status and refactor IsEmpty
+
+* [New][UHorizonSceneManagerLibrary] GetSceneManagerWithName will SetActorLabel in editor
+
+* [New][HorizonFrameworkFunctionLibrary] Implement SetComponentRotationToPlayer for BP simulation
+
+* [Refactor][HorizonScene] Set Default WidgetComponent DrawSize to 1920x1080
+
+* [HorizonSceneManager][Refactor] Change PlayerIndex to ControllerID
+
+
 
 
 *4.25.0 
