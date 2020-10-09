@@ -20,10 +20,8 @@ master branch may be unstable since it is in development, please switch to tags,
 
 ----------------------------------------------  
 How to Run Demo Project before purchase:(Only for Win64 editor build, no source code)
-1. [Download nuget executable](https://www.nuget.org/downloads) and copy the exe into C:\Windows\system32\ or any place listed in your PATH environment.
-2. Install [Git for Windows](https://gitforwindows.org/)
-3. Double click install_package_from_nuget.org.bat, and check if UE4Editor-*.dll are installed to Binaries\Win64 and Plugins\HorizonFrameworkPlugin\Binaries\Win64\
-4. Double click HorizonFrameworkDemo.uproject  
+1. Double click install_game_package_from_nuget_org.cmd, and check if UE4Editor-*.dll are installed to Binaries\Win64 and Plugins\HorizonFrameworkPlugin\Binaries\Win64\
+2. Double click HorizonFrameworkDemo.uproject  
 ----------------------------------------------
 
  
@@ -164,6 +162,11 @@ email: dorgonman@hotmail.com
 
 * [HorizonSceneManager][Refactor] Change PlayerIndex to ControllerID
 
+* [Refactor] using copy for GetSceneManagerWithName
+
+* [Refactor] Always spawn DefaultSceneManagerWeakPtr is not exist
+
+* AB#1780 [BugFix] Move all AHorizonSceneManager to HorizonSceneSystem
 
 
 
