@@ -4,18 +4,18 @@ trigger:
   batch: true
   branches:
     include:
-      - master
+      - main
   paths:
     include:
       - Source/*
       - Plugins/*
+      - ./*.uproject
 
 variables:
-  - name:  Pipeline.GameProjectRoot
-    value: '.'
-  - name: Pipeline.ArchivePath
-    value: '$(Pipeline.GameProjectRoot)/Intermediate/BuildArchive/'
-    
+    - name:  Pipeline.GameProjectRoot
+      value: '.'
+
+
 parameters:
   - name: bCleanSCM
     displayName: Pipeline bCleanSCM
@@ -42,7 +42,6 @@ stages:
           pool: 'Default'
           platform: 'win64'
           bCleanSCM: ${{ parameters.bCleanSCM }}
-          #checkoutPath: '../../HorizonPlugin/Framework/_01'
 
     - template: job/build-game-editor.yml@templates
       parameters:
@@ -51,7 +50,6 @@ stages:
           pool: 'Default-MacOS'
           platform: 'mac'
           bCleanSCM: ${{ parameters.bCleanSCM }}
-    
 
   - stage: Deploy
     jobs:

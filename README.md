@@ -14,7 +14,7 @@ private feed(only for internal use):
 
 Note: 
 
-master branch may be unstable since it is in development, please switch to tags, for example: editor/4.25.0
+main branch may be unstable since it is in development, please switch to tags, for example: editor/4.25.0
 
 
 

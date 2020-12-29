@@ -6,7 +6,7 @@ $projectRoot=$(Resolve-Path -Path "$PSScriptRoot\..\..\..\")
 $cmd="DownloadArtifact " +
     "-Organization https://hsgame.visualstudio.com/ " +
     "-Project UE4HorizonPlugin " +
-    "-DefinitionIds 28 " +
+    "-DefinitionIds 24 " +
     "-ArtifactName drop_standalone_win64_shipping " +
     "-DownloadToPath " + $projectRoot + "\Intermediate\PipelineArtifact\"
 
