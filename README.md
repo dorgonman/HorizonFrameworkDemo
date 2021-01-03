@@ -1,7 +1,7 @@
 [Marketplace](https://www.unrealengine.com/marketplace/horizonframework-plugin) 
 
 
-[![Build Status](https://hsgame.visualstudio.com/UE4HorizonPlugin/_apis/build/status/HorizonFramework/HorizonFrameworkDemo-Shipping-CI?branchName=master)](https://hsgame.visualstudio.com/UE4HorizonPlugin/_build/latest?definitionId=28&branchName=master)
+[![Build Status](https://dev.azure.com/hsgame/UE4HorizonPlugin/_apis/build/status/HorizonFramework/HorizonFrameworkDemo-Shipping-CI?repoName=HorizonFrameworkDemo&branchName=main)](https://dev.azure.com/hsgame/UE4HorizonPlugin/_build/latest?definitionId=28&repoName=HorizonFrameworkDemo&branchName=main)
 
 public feed: nuget.org  
 
