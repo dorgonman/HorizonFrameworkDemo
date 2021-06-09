@@ -29,7 +29,7 @@ How to Run Demo Project before purchase:(Only for Win64 editor build, no source 
 ----------------------------------------------  
 <h2 align="center">				
 			HorizonFrameworkPlugin<br>
-					4.26.0   <br>
+					4.27.0   <br>
 			http://dorgon.horizon-studio.net  <br>
 				dorgonman@hotmail.com  <br>
 </h2>
@@ -40,7 +40,7 @@ How to Run Demo Project before purchase:(Only for Win64 editor build, no source 
 -----------------------  
 System Requirements
 -----------------------  
-Supported UnrealEngine version: 4.18-4.26
+Supported UnrealEngine version: 4.18-4.27
 
 
 -----------------------
@@ -134,6 +134,41 @@ email: dorgonman@hotmail.com
 -----------------------
  Version History
 ----------------------- 
+
+*4.27.0   
+
+Source\HorizonFramework
+
+* AB#1867 [New][HorizonSceneBase] Implement ReceiveTransInFinished and ReceiveTransOutFinished
+
+* AB#1854 [SceneManager] Callback OnAddScene only if Scene exists
+
+* AB#1854 [New][HorizonSceneManager] Implement OnAddScene callback
+
+* AB#2091 [BugFix][HorizonGameInstance] Should not auto save if game didn't use it.
+
+* [HorizonSceneBase] Add comment to TransOutAnimationName
+
+* AB#2041 [New][HorizonSceneBase] PlayAnimationReverse when StartTransOut if TransInAnimationName equal to TransOutAnimationName
+
+* AB#2015 [BugFix][SceneManager] SceneEvent can't finished if Scene are cached and still running
+
+* AB#1929 [NEW][SceneManager] Implement SceneCache so cached SceneClass will only spawn single instance and will not create multiple time so improve performance
+
+* AB#1930 [BugFix] RemoveSceneByWidget should not remove TopScene and should remove Delegate after callback finished
+
+* Fix tutorial Scene
+
+* AB#1917 [BugFix][HorizonSceneBase] IsTransInFinished and IsTransOutFinished should check correct Animation name
+
+* AB#1921 [HorizonSceneEvent] Unused Scene callbacks should not appear in BP
+
+* AB#1887 [New][UHorizonSceneEvent] InitWidget when try to GetTransInSceneWidget
+
+
+Source\HorizonFrameworkEditor
+
+* AB#1867 [New][HorizonSceneBase] Implement ReceiveTransInFinished and ReceiveTransOutFinished
 
 
 *4.26.0   
