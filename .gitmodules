@@ -1,6 +1,6 @@
 [submodule "Plugins/HorizonFrameworkPlugin"]
 	path = Plugins/HorizonFrameworkPlugin
-	url = https://hsgame@dev.azure.com/hsgame/UE4HorizonPlugin/_git/HorizonFrameworkPlugin
+	url = https://hsgame@dev.azure.com/hsgame/UEHorizonPlugin/_git/HorizonFrameworkPlugin
 [submodule "ue_ci_scripts"]
 	path = ue_ci_scripts
 	url = https://hsgame@dev.azure.com/hsgame/EpicGames/_git/ue_ci_scripts
