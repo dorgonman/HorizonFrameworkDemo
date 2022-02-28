@@ -5,8 +5,6 @@
 using System;
 using System.IO;
 using UnrealBuildTool;
-using Tools.DotNETCommon;
-
 public class HorizonFrameworkDemo : ModuleRules
 {
 	public HorizonFrameworkDemo(ReadOnlyTargetRules Target) : base(Target)

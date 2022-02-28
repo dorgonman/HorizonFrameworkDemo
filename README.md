@@ -135,6 +135,20 @@ email: dorgonman@hotmail.com
  Version History
 ----------------------- 
 
+*5.0.0   
+
+Source\HorizonFramework
+
+* [Refactor] Fix 5.0 warning
+
+* [New] Add Test.spec and ProxyArchive
+
+Source\HorizonFrameworkEditor
+
+* [BugFix] Unregister custom class layout when ShutdownModule
+
+
+
 *4.27.0   
 
 Source\HorizonFramework
