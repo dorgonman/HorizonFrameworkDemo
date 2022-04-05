@@ -143,6 +143,15 @@ Source\HorizonFramework
 
 * [New] Add Test.spec and ProxyArchive
 
+* [BugFix] Fix UE5 GetLoadedPath warning
+
+* AB#2479 [BugFix] Widget sometimes not removed from viewport when seamless travel to next map
+
+* AB#2401 [BugFix] Fix UE5 'IsPendingKill' deprecated message
+
+* AB#2477 [BugFix][HorizonSceneBase] IsTransInFinished and IsTransOutFinished not work as expected
+
+
 Source\HorizonFrameworkEditor
 
 * [BugFix] Unregister custom class layout when ShutdownModule
