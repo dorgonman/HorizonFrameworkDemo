@@ -72,3 +72,4 @@ jobs:
           bBuildAndroid: ${{ parameters.bBuildAndroid }}
           bBuildMac: ${{ parameters.bBuildMac }}
           bBuildIOS: ${{ parameters.bBuildIOS }}
+          projectName: HorizonFrameworkDemo
