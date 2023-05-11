@@ -13,7 +13,11 @@ public class HorizonFrameworkDemoTarget : TargetRules
 
 		ExtraModuleNames.AddRange( new string[] { "HorizonFrameworkDemo" } );
 		DefaultBuildSettings = BuildSettingsVersion.V2;
-		IncludeOrderVersion = EngineIncludeOrderVersion.Unreal5_1;
-
-	}
+		IncludeOrderVersion = EngineIncludeOrderVersion.Latest;
+        //{
+        //    bUsePCHFiles = false;
+        //    bUseSharedPCHs = false;
+        //    bUseUnityBuild = false;
+        //}
+    }
 }

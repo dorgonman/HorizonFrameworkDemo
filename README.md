@@ -1,15 +1,11 @@
 [Marketplace](https://www.unrealengine.com/marketplace/horizonframework-plugin) 
 
 
-[![Build Status](https://dev.azure.com/hsgame/UE4HorizonPlugin/_apis/build/status/HorizonFramework/HorizonFrameworkDemo-Shipping-CI?repoName=HorizonFrameworkDemo&branchName=main)](https://dev.azure.com/hsgame/UE4HorizonPlugin/_build/latest?definitionId=28&repoName=HorizonFrameworkDemo&branchName=main)
+[![Build Status](https://dev.azure.com/hsgame/UEHorizonPlugin/_apis/build/status/HorizonFramework/HorizonFrameworkDemo-Shipping-CI?repoName=HorizonFrameworkDemo&branchName=main)](https://dev.azure.com/hsgame/UEHorizonPlugin/_build/latest?definitionId=28&repoName=HorizonFrameworkDemo&branchName=main)
 
 public feed: nuget.org  
 
 [![nuget.org package in feed in ](https://img.shields.io/nuget/v/HorizonFrameworkDemo.svg)](https://www.nuget.org/packages/HorizonFrameworkDemo/)
-
-private feed(only for internal use): 
-
-[![HorizonFrameworkDemo package in UE4HorizonPlugin feed in Azure Artifacts](https://feeds.dev.azure.com/hsgame/_apis/public/Packaging/Feeds/319fdc64-73ff-4910-b3b8-2ee206a67a49/Packages/5098845a-f9dd-48c2-a996-f5fc69389226/Badge)](https://dev.azure.com/hsgame/UE4HorizonPlugin/_packaging?_a=package&feed=319fdc64-73ff-4910-b3b8-2ee206a67a49&package=5098845a-f9dd-48c2-a996-f5fc69389226&preferRelease=true)
 
 
 Note: 
@@ -29,7 +25,7 @@ How to Run Demo Project before purchase:(Only for Win64 editor build, no source 
 ----------------------------------------------  
 <h2 align="center">				
 			HorizonFrameworkPlugin<br>
-					5.1.0   <br>
+					5.2.0   <br>
 			http://dorgon.horizon-studio.net  <br>
 				dorgonman@hotmail.com  <br>
 </h2>
@@ -40,7 +36,7 @@ How to Run Demo Project before purchase:(Only for Win64 editor build, no source 
 -----------------------  
 System Requirements
 -----------------------  
-Supported UnrealEngine version: 4.18-5.1
+Supported UnrealEngine version: 4.18-5.2
 
 
 -----------------------
@@ -134,6 +130,19 @@ email: dorgonman@hotmail.com
 -----------------------
  Version History
 ----------------------- 
+
+*5.2.0   
+
+Source\HorizonFramework
+
+* [Refactor] Fix 5.2 warning
+
+
+*5.1.0   
+
+Source\HorizonFramework
+
+* [Refactor] Fix 5.1 warning
 
 *5.0.0   
 

@@ -13,13 +13,13 @@ public class HorizonFrameworkDemoEditorTarget : TargetRules
 
 		ExtraModuleNames.AddRange( new string[] { "HorizonFrameworkDemo" } );
 		DefaultBuildSettings = BuildSettingsVersion.V2;
-        IncludeOrderVersion = EngineIncludeOrderVersion.Unreal5_1;
+        IncludeOrderVersion = EngineIncludeOrderVersion.Latest;
         // StrictIncludes for Plugin Demo Build to check if all source files have self-contained headers
         // -NoPCH -NoSharedPCH -DisableUnity
-        // {
-        //     bUsePCHFiles = false;
-        //     bUseSharedPCHs = false;
-        //     bUseUnityBuild = false;
-        // }
-	}
+        //{
+        //    bUsePCHFiles = false;
+        //    bUseSharedPCHs = false;
+        //    bUseUnityBuild = false;
+        //}
+    }
 }
