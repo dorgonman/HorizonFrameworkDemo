@@ -25,7 +25,7 @@ How to Run Demo Project before purchase:(Only for Win64 editor build, no source 
 ----------------------------------------------  
 <h2 align="center">				
 			HorizonFrameworkPlugin<br>
-					5.2.0   <br>
+					5.3.0   <br>
 			http://dorgon.horizon-studio.net  <br>
 				dorgonman@hotmail.com  <br>
 </h2>
@@ -36,7 +36,7 @@ How to Run Demo Project before purchase:(Only for Win64 editor build, no source 
 -----------------------  
 System Requirements
 -----------------------  
-Supported UnrealEngine version: 4.18-5.2
+Supported UnrealEngine version: 4.18-5.3
 
 
 -----------------------
@@ -131,6 +131,10 @@ email: dorgonman@hotmail.com
  Version History
 ----------------------- 
 
+*5.3.0
+
+	Update to 5.3.0
+	
 *5.2.0   
 
 Source\HorizonFramework
