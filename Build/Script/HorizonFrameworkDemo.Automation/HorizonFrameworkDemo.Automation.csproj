@@ -8,8 +8,8 @@
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <GenerateTargetFrameworkAttribute>false</GenerateTargetFrameworkAttribute>
     <Configurations>Debug;Release;Development</Configurations>
-    <RootNamespace>HorizonTweenDemo.Automation</RootNamespace>
-    <AssemblyName>HorizonTweenDemo.Automation</AssemblyName>
+    <RootNamespace>HorizonFrameworkDemo.Automation</RootNamespace>
+    <AssemblyName>HorizonFrameworkDemo.Automation</AssemblyName>
     <WarningsNotAsErrors>612,618</WarningsNotAsErrors>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <DebugType>pdbonly</DebugType>
