@@ -129,7 +129,12 @@ email: dorgonman@hotmail.com
 
 -----------------------
  Version History
------------------------ 
+-----------------------
+
+*5.4.0
+
+* [Refactor] Use TObjectPtr instead of RawPointer
+
 
 *5.3.0
 
