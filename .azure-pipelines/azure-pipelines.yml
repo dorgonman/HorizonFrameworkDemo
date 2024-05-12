@@ -10,11 +10,13 @@ trigger:
       - Source/*
       - Plugins/*
       - Content/*
-      - /*.uproject
+      - ./*.uproject
 
 variables:
   - name:  Pipeline.GameProjectRoot
     value: '.'
+  - name: AZP_AGENT_ALLOW_WORK_DIRECTORY_REPOSITORIES
+    value: "true"
 
 
 parameters:
@@ -73,3 +75,4 @@ jobs:
           bBuildMac: ${{ parameters.bBuildMac }}
           bBuildIOS: ${{ parameters.bBuildIOS }}
           projectName: HorizonFrameworkDemo
+          checkoutPath: ../mount/ssd/_azvcs/Horizon/FrameworkDemo
