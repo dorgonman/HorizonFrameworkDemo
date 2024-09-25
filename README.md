@@ -25,7 +25,7 @@ How to Run Demo Project before purchase:(Only for Win64 editor build, no source 
 ----------------------------------------------  
 <h2 align="center">				
 			HorizonFrameworkPlugin<br>
-					5.4.0   <br>
+					5.4.1   <br>
 			http://dorgon.horizon-studio.net  <br>
 				dorgonman@hotmail.com  <br>
 </h2>
@@ -130,6 +130,16 @@ email: dorgonman@hotmail.com
 -----------------------
  Version History
 -----------------------
+
+
+*5.4.1
+
+* [New] Implement Push/Change Scene by SoftClass
+
+* [New] Implement Push/Change Scene using UserWidget Only, without Create Scene BP Asset
+
+* [Optimization] include UE_INLINE_GENERATED_CPP_BY_NAME to all .cpp for increase compile time
+
 
 *5.4.0
 
