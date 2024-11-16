@@ -131,6 +131,9 @@ email: dorgonman@hotmail.com
  Version History
 -----------------------
 
+*5.5.0
+
+* Update to 5.5.0
 
 *5.4.1
 
