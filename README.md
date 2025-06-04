@@ -25,7 +25,7 @@ How to Run Demo Project before purchase:(Only for Win64 editor build, no source 
 ----------------------------------------------  
 <h2 align="center">				
 			HorizonFrameworkPlugin<br>
-					5.5.0   <br>
+					5.6.0   <br>
 			http://dorgon.horizon-studio.net  <br>
 				dorgonman@hotmail.com  <br>
 </h2>
@@ -130,6 +130,10 @@ email: dorgonman@hotmail.com
 -----------------------
  Version History
 -----------------------
+
+*5.6.0
+
+* Update to 5.6.0
 
 *5.5.0
 
