@@ -70,3 +70,4 @@ Releases
 EditorOpenOrder.log
 /.vsconfig
 *.props
+/.kano/cache/

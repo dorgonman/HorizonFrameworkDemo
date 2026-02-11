@@ -7,3 +7,6 @@
 [submodule "horizon_ci_scripts"]
 	path = horizon_ci_scripts
 	url = https://hsgame@dev.azure.com/hsgame/EpicGames/_git/horizon_ci_scripts
+[submodule "skills/kano-agent-backlog-skill"]
+	path = skills/kano-agent-backlog-skill
+	url = https://github.com/dorgonman/kano-agent-backlog-skill.git

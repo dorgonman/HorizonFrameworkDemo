@@ -1,0 +1,21 @@
+# Project-Level Backlog Configuration
+# This file is source-of-truth and should be committed.
+
+[defaults]
+auto_refresh = true
+skill_developer = false
+
+[shared.cache]
+root = ".kano/cache/backlog"
+
+[shared.vector]
+enabled = true
+backend = "sqlite"
+path = ".kano/cache/backlog/vector"
+collection = "backlog"
+metric = "cosine"
+# Added by kano-backlog admin init (2026-02-11 15:04:13Z, agent=kiro)
+[products.HorizonFrameworkDemo]
+name = "HorizonFrameworkDemo"
+prefix = "HR"
+backlog_root = "_kano/backlog/products/HorizonFrameworkDemo"
