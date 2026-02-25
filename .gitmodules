@@ -1,12 +1,17 @@
 [submodule "Plugins/HorizonFrameworkPlugin"]
 	path = Plugins/HorizonFrameworkPlugin
-	url = https://hsgame@dev.azure.com/hsgame/UEHorizonPlugin/_git/HorizonFrameworkPlugin
+	url = https://kanohorizonia@dev.azure.com/kanohorizonia/UEHorizonPlugin/_git/HorizonFrameworkPlugin
+
 [submodule "ue_ci_scripts"]
 	path = ue_ci_scripts
-	url = https://hsgame@dev.azure.com/hsgame/EpicGames/_git/ue_ci_scripts
+	url = https://kanohorizonia@dev.azure.com/kanohorizonia/EpicGames/_git/ue_ci_scripts
+
 [submodule "horizon_ci_scripts"]
 	path = horizon_ci_scripts
-	url = https://hsgame@dev.azure.com/hsgame/EpicGames/_git/horizon_ci_scripts
-[submodule "skills/kano-agent-backlog-skill"]
-	path = skills/kano-agent-backlog-skill
-	url = https://github.com/dorgonman/kano-agent-backlog-skill.git
+	url = https://kanohorizonia@dev.azure.com/kanohorizonia/EpicGames/_git/horizon_ci_scripts
+
+[submodule ".agents/skills/kano"]
+	path = .agents/skills/kano
+	url = https://github.com/kanohorizonia/kano-agent-skill.git
+	branch = main
+
