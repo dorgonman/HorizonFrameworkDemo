@@ -2,11 +2,6 @@
 	path = Plugins/HorizonFrameworkPlugin
 	url = https://kanohorizonia@dev.azure.com/kanohorizonia/UEHorizonPlugin/_git/HorizonFrameworkPlugin
 
-[submodule ".agents/skills/kano"]
-	path = .agents/skills/kano
-	url = https://github.com/kanohorizonia/kano-agent-skill.git
-	branch = main
-
 [submodule "Build/Base"]
 	path = Build/Base
 	url = https://kanohorizonia@dev.azure.com/kanohorizonia/EpicGames/_git/KanoUnrealBuildTool
