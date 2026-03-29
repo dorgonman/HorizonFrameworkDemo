@@ -68,7 +68,8 @@ jobs:
 
     - template: job/verify-plugin-build.yml@templates
       parameters: 
-          bRunAutomationTest: false
+          bRunAutomationTest: true
+          gauntletTestName: 'Plugin.HorizonFramework.*'
           bCleanSCM: ${{ parameters.bCleanSCM }}
           bBuildWin64: ${{ parameters.bBuildWin64 }}
           bBuildAndroid: ${{ parameters.bBuildAndroid }}
