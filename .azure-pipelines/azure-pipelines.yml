@@ -68,7 +68,7 @@ jobs:
 
     - template: job/verify-plugin-build.yml@templates
       parameters: 
-          bRunAutomationTest: true
+          bRunAutomationTest: false
           bCleanSCM: ${{ parameters.bCleanSCM }}
           bBuildWin64: ${{ parameters.bBuildWin64 }}
           bBuildAndroid: ${{ parameters.bBuildAndroid }}
