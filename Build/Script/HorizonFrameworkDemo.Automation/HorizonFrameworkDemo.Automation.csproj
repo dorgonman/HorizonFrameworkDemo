@@ -31,13 +31,23 @@
     <DebugType>full</DebugType>
   </PropertyGroup>
 
-  <ItemGroup>
+  <!-- InstalledBuild: reference pre-built DLLs (UNREAL_INSTALLED_BUILD=1) -->
+  <ItemGroup Condition="'$(UNREAL_INSTALLED_BUILD)' == '1'">
+    <Reference Include="$(EngineRoot)\Engine\Binaries\DotNET\AutomationTool\AutomationScripts\Gauntlet.Automation.dll" />
+    <Reference Include="$(EngineRoot)\Engine\Binaries\DotNET\AutomationTool\AutomationScripts\AutomationUtils.Automation.dll" />
+    <Reference Include="$(EngineRoot)\Engine\Binaries\DotNET\AutomationTool\AutomationScripts\AutomationScripts.Automation.dll" />
+    <Reference Include="$(EngineRoot)\Engine\Binaries\DotNET\AutomationTool\EpicGames.Build.dll" />
+    <Reference Include="$(EngineRoot)\Engine\Binaries\DotNET\AutomationTool\EpicGames.Core.dll" />
+  </ItemGroup>
+
+  <!-- SourceBuild: compile from source csprojs (UNREAL_INSTALLED_BUILD!=1, default) -->
+  <ItemGroup Condition="'$(UNREAL_INSTALLED_BUILD)' != '1'">
     <ProjectReference Include="$(EngineRoot)\Engine\Source\Programs\Shared\EpicGames.Build\EpicGames.Build.csproj" PrivateAssets="all" />
     <ProjectReference Include="$(EngineRoot)\Engine\Source\Programs\Shared\EpicGames.Core\EpicGames.Core.csproj" PrivateAssets="all" />
     <ProjectReference Include="$(EngineRoot)\Engine\Source\Programs\UnrealBuildTool\UnrealBuildTool.csproj" PrivateAssets="all" />
     <ProjectReference Include="$(EngineRoot)\Engine\Source\Programs\AutomationTool\AutomationUtils\AutomationUtils.Automation.csproj" PrivateAssets="all" />
     <ProjectReference Include="$(EngineRoot)\Engine\Source\Programs\AutomationTool\Scripts\AutomationScripts.Automation.csproj" PrivateAssets="all" />
-    <ProjectReference Include="$(EngineRoot)\Engine\Source\Programs\AutomationTool\Gauntlet\Gauntlet.Automation.csproj" PrivateAssets="all" />  
+    <ProjectReference Include="$(EngineRoot)\Engine\Source\Programs\AutomationTool\Gauntlet\Gauntlet.Automation.csproj" PrivateAssets="all" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
