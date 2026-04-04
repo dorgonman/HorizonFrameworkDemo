@@ -49,6 +49,11 @@ namespace UnrealGame
 			int ClientCount = Context.TestParams.ParseValue("numclients", 1);
 			bool WithServer = Context.TestParams.ParseParam("server");
 
+			// Set ExecCmds BEFORE RequireRole — RequireRole internally calls ApplyToConfig()
+			// which builds the client command line. If we set ExecCmds first, the value
+			// is already present when the command line is constructed.
+			Config.ExecCmds = "automation List;RunTests StartsWith:Plugin+StartsWith:_Game+StartsWith:Project.Functional Tests;Quit";
+
 			if (ClientCount > 0)
 			{
 				Config.RequireRoles(UnrealTargetRole.Client, ClientCount);
