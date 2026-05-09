@@ -1,0 +1,121 @@
+// .jenkins/Build/UGSBuild.Jenkinsfile
+// Thin consumer entrypoint for shared UGSBuild orchestration.
+
+@Library('jenkins-unreal-pipeline-library') _
+
+env.GIT_CONFIG_COUNT = '1'
+env.GIT_CONFIG_KEY_0 = 'credential.useHttpPath'
+env.GIT_CONFIG_VALUE_0 = 'true'
+
+properties([
+    parameters([
+        booleanParam(name: 'bDeploySentrySymbols', defaultValue: true, description: 'After standalone builds, create Sentry release/deploy records and upload debug symbols'),
+        booleanParam(name: 'bDeploySentryForeignUnrealEngineSymbols', defaultValue: false, description: 'Also upload Unreal Engine editor symbols to SENTRY_FOREIGN_PROJECT'),
+        booleanParam(name: 'bDeploySentryBundleSources', defaultValue: true, description: 'Run sentry-cli difutil bundle-sources and upload source context with debug symbols. Enable only for projects allowed to upload source code.'),
+        string(name: 'SENTRY_CREDENTIAL_ID', defaultValue: 'SENTRY_AUTH_INFO', description: 'Jenkins username/password credential: username=SENTRY_URL, password=SENTRY_AUTH_TOKEN'),
+        string(name: 'SENTRY_ORG', defaultValue: 'kanohorizonia', description: 'Sentry organization slug for this project'),
+        string(name: 'SENTRY_PROJECT', defaultValue: 'horizonframeworkdemo', description: 'Sentry project slug for this project'),
+        string(name: 'SENTRY_FOREIGN_PROJECT', defaultValue: 'unrealengine', description: 'Separate Sentry project slug for foreign symbols such as Unreal Engine PDBs'),
+        string(name: 'SENTRY_ENVIRONMENT', defaultValue: 'dev', description: 'Sentry deploy environment name'),
+    ])
+])
+
+def cfg = [
+    projectRoot: '.',
+    sharedLibraryName: 'jenkins-unreal-pipeline-library',
+    // UGS aggregate and NuGet stages share a Deploy workspace; keep Windows work on one node.
+    windowsAgentLabel: 'pc-dorgonchang-rtx3090.local',
+    macAgentLabel: 'unreal-mac',
+    linuxAgentLabel: 'unreal-linux',
+    win64StandaloneAgentLabel: '',
+    macStandaloneAgentLabel: '',
+    linuxStandaloneAgentLabel: '',
+    win64UgsAgentLabel: 'pc-dorgonchang-rtx3090.local',
+    macUgsAgentLabel: '',
+    linuxUgsAgentLabel: '',
+    scriptRoot: 'Build',
+    reportRoot: 'Intermediate/BuildPackage',
+    slug: 'HorizonFrameworkDemo',
+    workspaceSlot: 'Package',
+    win64SharedWorkspaceRoot: 'C:/_agent/_jenkins/agent/workspace/HorizonPlugin',
+    macSharedWorkspaceRoot: '/Users/Shared/jenkins/agent/workspace/HorizonPlugin',
+    linuxSharedWorkspaceRoot: '/var/jenkins/home/ws/HorizonPlugin',
+    buildArchiveArtifactRoot: 'Intermediate/BuildArchive',
+    buildPackageArtifactRoot: 'Intermediate/BuildPackage',
+    buildPluginArtifactRoot: 'Intermediate/BuildPlugin',
+    buildUgsArtifactRoot: 'Intermediate/BuildUGS',
+    bCleanSCM: false,
+    bBuildStandaloneWin64: true,
+    bBuildServerWin64: false,
+    bBuildPluginWin64: true,
+    bBuildStandaloneAndroid: false,
+    bBuildServerAndroid: false,
+    bBuildStandaloneMac: false,
+    bBuildServerMac: false,
+    bBuildStandaloneLinux: false,
+    bBuildServerLinux: false,
+    bBuildStandaloneIOS: false,
+    bBuildServerIOS: false,
+    bBuildStandaloneXSX: false,
+    bBuildServerXSX: false,
+    bBuildStandalonePS5: false,
+    bBuildServerPS5: false,
+    bBuildStandaloneSwitch2: false,
+    bBuildServerSwitch2: false,
+    bRunBuildPhase: true,
+    bRunAggregatePhase: false,
+    bRunPrepareDeployPhase: false,
+    bRunDeployPhase: false,
+    bPrepareNuGetPackage: false,
+    bDeployNuGetPackage: false,
+    bDeployPerforce: false,
+    nugetFeed: 'https://api.nuget.org/v3/index.json',
+    aggregateAgentLabel: 'pc-dorgonchang-rtx3090.local',
+    deployWorkspace: '',
+    bRunBuildGraphAggregation: false,
+    bRunTestStandaloneWin64: true,
+    coverageFormat: ['xml', 'html'],
+    buildConfiguration: 'Development',
+    bDeploySentrySymbols: true,
+    bDeploySentryForeignUnrealEngineSymbols: false,
+    bCopyPreCompileEngine: true,
+    preArchiveCopyStep: 'Default',
+    sentryCredentialId: 'SENTRY_AUTH_INFO',
+    sentryOrg: 'kanohorizonia',
+    sentryProject: 'horizonframeworkdemo',
+    sentryForeignProject: 'unrealengine',
+    sentryEnvironment: 'dev',
+    bUploadToUnrealHordeServer: false,
+    bDeployUnrealHordeServer: true,
+    unrealHordeServer: 'http://unrealhorde.local/',
+    hordeToken: '',
+    hordeGitStreamRepo: 'https://dev.azure.com/kanohorizonia/UEHorizonPlugin/_git/HorizonFrameworkDemo',
+    pluginName: 'HorizonFrameworkPlugin',
+    projectName: 'HorizonFrameworkDemo',
+    uprojectPath: 'HorizonFrameworkDemo.uproject',
+]
+
+// NOTE: Jenkins job XML may be missing <defaultValue> for SENTRY_* params even
+// when the Groovy file specifies them. This can cause Jenkins to pass null or ""
+// for these parameters on every build, silently overriding cfg defaults.
+// The explicit " ?: cfg.X" fallback below guards against this by preferring
+// cfg defaults when the Jenkins-supplied value is null/empty/blank.
+def resolvedParams = [
+    bDeploySentrySymbols:              params.bDeploySentrySymbols,
+    bDeploySentryForeignUnrealEngineSymbols: params.bDeploySentryForeignUnrealEngineSymbols,
+    bDeploySentryBundleSources:        params.bDeploySentryBundleSources,
+    sentryCredentialId:                params.SENTRY_CREDENTIAL_ID?.trim() ?: cfg.sentryCredentialId,
+    sentryOrg:                         params.SENTRY_ORG?.trim() ?: cfg.sentryOrg,
+    sentryProject:                     params.SENTRY_PROJECT?.trim() ?: cfg.sentryProject,
+    sentryForeignProject:              params.SENTRY_FOREIGN_PROJECT?.trim() ?: cfg.sentryForeignProject,
+    sentryEnvironment:                params.SENTRY_ENVIRONMENT?.trim() ?: cfg.sentryEnvironment,
+]
+// Boolean params: Jenkins passes null when no defaultValue is set in the job XML.
+// When null, fall back to cfg default (which is the authoritative value).
+resolvedParams.bDeploySentrySymbols              = resolvedParams.bDeploySentrySymbols              ?: cfg.bDeploySentrySymbols
+resolvedParams.bDeploySentryForeignUnrealEngineSymbols = resolvedParams.bDeploySentryForeignUnrealEngineSymbols ?: cfg.bDeploySentryForeignUnrealEngineSymbols
+resolvedParams.bDeploySentryBundleSources         = resolvedParams.bDeploySentryBundleSources         ?: cfg.bDeploySentryBundleSources
+
+def config = unrealConfig(cfg + resolvedParams)
+
+unrealUgsBuildPipeline(config: config)
