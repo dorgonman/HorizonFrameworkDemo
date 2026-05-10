@@ -16,9 +16,11 @@ namespace UnrealGame
 		
 		[AutoParam]
 		public string AdditionalCommandLine = "";
+		[AutoParam]
+		public string AdditionalCommandLine2 = "-d3d12";
 		
 		[AutoParam]
-		public string ExecCmds = "automation List;RunTests StartsWith:Plugin+StartsWith:_Game+StartsWith:Project.Functional Tests;Quit";
+		public string ExecCmds = "automation RunTests StartsWith:Plugin+StartsWith:_Game+StartsWith:Project.Functional Tests;Quit";
         
 
         /// <summary>
@@ -29,8 +31,9 @@ namespace UnrealGame
 		{
 			base.ApplyToConfig(AppConfig, ConfigRole, OtherRoles);
 
-			AppConfig.CommandLine += " -ExecCmds=\"" + ExecCmds + "\" ";
+			AppConfig.CommandLine += " -ExecCmds=\"" + ExecCmds + "\" -FORCELOGFLUSH";
 			AppConfig.CommandLine += AdditionalCommandLine;
+			AppConfig.CommandLine += AdditionalCommandLine2;
 			
 	
 		}
@@ -52,7 +55,7 @@ namespace UnrealGame
 			// Set ExecCmds BEFORE RequireRole — RequireRole internally calls ApplyToConfig()
 			// which builds the client command line. If we set ExecCmds first, the value
 			// is already present when the command line is constructed.
-			Config.ExecCmds = "automation List;RunTests StartsWith:Plugin+StartsWith:_Game+StartsWith:Project.Functional Tests;Quit";
+			Config.ExecCmds = "automation RunTests StartsWith:Plugin+StartsWith:_Game+StartsWith:Project.Functional Tests;Quit";
 
 			if (ClientCount > 0)
 			{
