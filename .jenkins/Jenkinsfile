@@ -51,8 +51,8 @@ pipeline {
         booleanParam name: 'bRunTestStandaloneWin64', defaultValue: true, description: 'Run Win64 standalone tests'
 
         // === Sentry Deploy Symbols ===
-        booleanParam name: 'bDeploySentrySymbols', defaultValue: true, description: 'After standalone builds, create Sentry release/deploy records and upload debug symbols'
-        booleanParam name: 'bDeploySentryBundleSources', defaultValue: true, description: 'Run sentry-cli difutil bundle-sources and upload source context with debug symbols. Enable only for projects allowed to upload source code.'
+        booleanParam name: 'bDeploySentrySymbols', defaultValue: false, description: 'After standalone builds, create Sentry release/deploy records and upload debug symbols'
+        booleanParam name: 'bDeploySentryBundleSources', defaultValue: false, description: 'Run sentry-cli difutil bundle-sources and upload source context with debug symbols. Enable only for projects allowed to upload source code.'
         string name: 'SENTRY_CREDENTIAL_ID', defaultValue: 'SENTRY_AUTH_INFO', description: 'Jenkins username/password credential: username=SENTRY_URL, password=SENTRY_AUTH_TOKEN'
         string name: 'SENTRY_ORG', defaultValue: 'kanohorizonia', description: 'Sentry organization slug for this project'
         string name: 'SENTRY_PROJECT', defaultValue: 'horizonframeworkdemo', description: 'Sentry project slug for this project'

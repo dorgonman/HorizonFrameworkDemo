@@ -71,3 +71,4 @@ EditorOpenOrder.log
 /.vsconfig
 *.props
 /.kano/cache/
+.kano/
