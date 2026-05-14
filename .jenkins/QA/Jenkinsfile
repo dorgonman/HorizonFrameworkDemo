@@ -1,6 +1,6 @@
-// .jenkins/QA/Jenkinsfile — QA rerun pipeline entrypoint for HorizonFrameworkDemo.
+// .jenkins/QA/Jenkinsfile — QA rerun pipeline entrypoint.
 // Consumes packaged artifacts from Build/Development and reruns automation tests.
 
 @Library('jenkins-unreal-pipeline-library') _
 
-unrealQaPipeline(windowsAgentLabel: 'unreal-win64')
+unrealQaPipeline()
