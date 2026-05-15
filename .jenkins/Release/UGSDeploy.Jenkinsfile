@@ -2,7 +2,7 @@
 // Dedicated deploy workspace that aggregates UGS artifacts from all platforms.
 // Runs after UGSBuild completes on all platforms.
 
-@Library('jenkins-unreal-pipeline-library') _
+@Library('kano-jenkins-unreal-pipeline-library') _
 
 def sharedWorkspaceRoot = 'C:/_agent/_jenkins/agent/workspace'
 
