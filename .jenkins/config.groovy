@@ -96,7 +96,7 @@ def projectConfig() {
         bRunTestWin64Standalone: true,
         coverageFormat:     ['xml', 'html'],
         buildConfiguration: 'Development',
-        bDeploySentrySymbols: true,
+        bDeploySentrySymbols: false,
         bDeploySentryForeignUnrealEngineSymbols: false,
         bCopyPreCompileEngine: true,
         preArchiveCopyStep: 'Default',
