@@ -3,4 +3,6 @@
 
 @Library('kano-jenkins-unreal-pipeline-library') _
 
-unrealQaPipeline()
+unrealQaPipeline(overrides: [
+    qaWorkspacePath: 'C:/_agent/jenkins_ws/HorizonPlugin/HorizonFrameworkDemo/QA/Development'
+])
