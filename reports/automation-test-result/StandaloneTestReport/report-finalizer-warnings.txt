@@ -1,0 +1,2 @@
+Missing report-site evidence: Result/imageCompare
+Missing report-site evidence: Result/ClientOutput.log

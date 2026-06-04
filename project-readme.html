@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en"><head><title>project-readme</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM Plex Mono&amp;family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;display=swap"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta property="og:title" content="project-readme"/><meta property="og:description" content="Marketplace public feed: nuget.org Note: main branch may be unstable since it is in development, please switch to tags, for example: editor/4.25.0 How to Run Demo Project before ..."/><meta property="og:image" content="https://dorgonman.github.io/HorizonUIPluginDemo/static/og-image.png"/><meta property="og:width" content="1200"/><meta property="og:height" content="675"/><link rel="icon" href="./static/icon.png"/><meta name="description" content="Marketplace public feed: nuget.org Note: main branch may be unstable since it is in development, please switch to tags, for example: editor/4.25.0 How to Run Demo Project before ..."/><meta name="generator" content="Quartz"/><link href="./index.css" rel="stylesheet" type="text/css" spa-preserve/><script src="./prescript.js" type="application/javascript" spa-preserve></script><script type="application/javascript" spa-preserve>const fetchData = fetch("./static/contentIndex.json").then(data => data.json())</script></head><body data-slug="project-readme"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href=".">HorizonUIPluginDemo Release</a></h2><div class="spacer mobile-only"></div><div class="search"><button class="search-button" id="search-button"><p>Search</p><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg></button><div id="search-container"><div id="search-space"><input autocomplete="off" id="search-bar" name="search" type="text" aria-label="Search for something" placeholder="Search for something"/><div id="search-layout" data-preview="true"></div></div></div></div><button class="darkmode" id="darkmode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="Dark mode"><title>Dark mode</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="Light mode"><title>Light mode</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button><div class="explorer desktop-only"><button type="button" id="explorer" data-behavior="collapse" data-collapsed="collapsed" data-savestate="true" data-tree="[]" aria-controls="explorer-content" aria-expanded="false"><h2>Explorer</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-content"><ul class="overflow" id="explorer-ul"><li><div class="folder-outer open"><ul style="padding-left:0;" class="content" data-folderul><li><div class="folder-outer "><ul style="padding-left:0;" class="content" data-folderul></ul></div></li><li><a href="./testing" data-for="testing">Automation Test Results</a></li><li><a href="./coverage" data-for="coverage">Coverage Summary</a></li><li><a href="./project-readme" data-for="project-readme">project-readme</a></li><li><a href="./readme" data-for="readme">readme</a></li></ul></div></li><li id="explorer-end"></li></ul></div></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="./">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>project-readme</a></div></nav><h1 class="article-title">project-readme</h1><p show-comma="true" class="content-meta"><span>Jun 05, 2026</span><span>5 min read</span></p></div></div><article class="popover-hint"><p><a href="https://www.unrealengine.com/marketplace/horizonframework-plugin" class="external">Marketplace<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p><a href="https://dev.azure.com/hsgame/UEHorizonPlugin/_build/latest?definitionId=28&amp;repoName=HorizonFrameworkDemo&amp;branchName=main" class="external"><img src="https://dev.azure.com/hsgame/UEHorizonPlugin/_apis/build/status/HorizonFramework/HorizonFrameworkDemo-Shipping-CI?repoName=HorizonFrameworkDemo&amp;branchName=main" alt="Build Status"/><svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p>public feed: nuget.org</p>
+<p><a href="https://www.nuget.org/packages/HorizonFrameworkDemo/" class="external"><img src="https://img.shields.io/nuget/v/HorizonFrameworkDemo.svg" alt="nuget.org package in feed in "/><svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p>Note:</p>
+<p>main branch may be unstable since it is in development, please switch to tags, for example: editor/4.25.0</p>
+<hr/>
+<p>How to Run Demo Project before purchase:(Only for Win64 editor build, no source code)</p>
+<ol>
+<li>Double click install_game_package_from_nuget_org.cmd, and check if UE4Editor-*.dll are installed to Binaries\Win64 and Plugins\HorizonFrameworkPlugin\Binaries\Win64\</li>
+<li>Double click HorizonFrameworkDemo.uproject</li>
+</ol>
+<hr/>
+<hr/>
+<h2 align="center" id="horizonframeworkplugin570---httpdorgonhorizon-studionet--dorgonmanhotmailcom--">				
+			HorizonFrameworkPlugin<br/>
+					5.7.0   <br/>
+			http://dorgon.horizon-studio.net  <br/>
+				dorgonman@hotmail.com  <br/>
+<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#horizonframeworkplugin570---httpdorgonhorizon-studionet--dorgonmanhotmailcom--" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+----------------------------------------------  
+<p>The goal of this plugin is to provide a general game framework that can manage WidgetBlueprints and related game logic with more organized way.</p>
+<hr/>
+<h2 id="system-requirements">System Requirements<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#system-requirements" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>Supported UnrealEngine version: 4.18-5.3</p>
+<hr/>
+<h2 id="installation-guide">Installation Guide<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#installation-guide" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>Put HorizonFrameworkPlugin into YOUR_PROJECT/Plugins folder,
+and then add module to your project
+YOUR_PROJECT.Build.cs:
+PublicDependencyModuleNames.AddRange(new string[] { “HorizonFramework” });</p>
+<hr/>
+<h2 id="user-guide">User Guide<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#user-guide" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ol>
+<li>Create classes that inherited from AHorizonScene</li>
+<li>Design your own Widget Blueprint.</li>
+<li>Assign Widget Blueprint to HorizonScene’s WidgetClass</li>
+<li>Use functions in AHorizonSceneManager, UHorizonSceneManagerLibrary or UHorizonSceneManagerProxy to push, pop or change to your UI Scene.</li>
+</ol>
+<hr/>
+<h2 id="technical-details">Technical Details<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#technical-details" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>List of Modules: HorizonFramework(Runtime), HorizonFrameworkEditor(Editor)</p>
+<p>Intended Platform: All Platforms</p>
+<p>Platforms Tested: Windows</p>
+<p>Demo Project: <a href="https://github.com/dorgonman/HorizonFrameworkDemo" class="external">https://github.com/dorgonman/HorizonFrameworkDemo<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p>DemoVideo: <a href="https://youtu.be/TQ3oFkdn2Pg" class="external">https://youtu.be/TQ3oFkdn2Pg<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<hr/>
+<h2 id="what-does-your-plugin-dowhat-is-the-intent-of-your-plugin">What does your plugin do/What is the intent of your plugin<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#what-does-your-plugin-dowhat-is-the-intent-of-your-plugin" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>This plugin is a UI Management Framework that focus on manage your UMG and relate game logic with stack operation, ex: PushScene, PopScene, ChangeScene and ReplaceScene.</p>
+<hr/>
+<h2 id="user-guide-1">User Guide<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#user-guide-1" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>example 1: AHorizonScenen::OnStartTransInNative and AHorizonScenen::OnTopToBackNative Callback</p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="cpp" data-theme="github-light github-dark"><code data-language="cpp" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">	UCLASS</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">()</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">	class</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> UMyUserWidget</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">public</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> UUserWidget</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">	{</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">		UPROPERTY</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">meta</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> =</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> (BindWidgetOptional))</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">		UButton</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">*</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> Button_PushOtherScene;</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">		UPROPERTY</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">EditAnywhere</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">, </span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">Category</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> =</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> &quot;Scene&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">)</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">		TSubclassOf</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">&lt;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">AHorizonSceneBase</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">></span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> OtherSceneClass;</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">	}</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">	void</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> UMyUserWidget</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">::</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">NativeConstruct</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">()</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">	{</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">		...</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">		Button_PushOtherScene->OnClicked.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">AddDynamic</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">this</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">, </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">&amp;</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">ThisClass</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">::OnPushOtherScene);</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">		...</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">	}</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">	void</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> UMyUserWidget</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">::</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">OnPushOtherScene</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">()</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">	{</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">			auto</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> pSceneManager </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> UHorizonSceneManagerLibrary</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">::</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">GetDefaultSceneManager</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">this</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">);</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">			int32 playerIndex </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> UGameplayStatics</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">::</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">GetPlayerControllerID</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">GetOwningPlayer</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">());</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">			auto</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> pSceneEvent </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> pSceneManager-></span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">PushSceneByClass</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(OtherSceneClass, </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">false</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">, playerIndex);</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">			auto</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> pTransInScene </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> pSceneEvent-></span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">GetTransInScene</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">();</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">			ensureMsgf</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(pTransInScene, </span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">TEXT</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;oops! something error&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">));</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">			pTransInScene->OnStartTransInNative.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">AddLambda</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">([</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;">pSceneEvent</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">]()</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">			{</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">				auto</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> pOtherSceneWidget </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> Cast</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">&lt;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">UMyOtherSceneWidget</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">>></span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(pSceneEvent-></span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">GetTransInSceneWidget</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">());</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">				pOtherSceneWidget-></span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">Setup</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">false</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">);</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">			});</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">			pTransInScene->OnTopToBackNative.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">AddLambda</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">([</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">this</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">]() </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">			{</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">				auto</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> pOwningPlayer </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> GetOwningPlayer</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">();</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">				UWidgetBlueprintLibrary</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">::</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">SetInputMode_UIOnlyEx</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(pOwningPlayer, Button_PushOtherScene, </span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">EMouseLockMode</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">::DoNotLock);</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">			});</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">	}</span></span></code></pre></figure>
+<hr/>
+<h2 id="contact-and-support">Contact and Support<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#contact-and-support" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>email: <a href="mailto:dorgonman@hotmail.com" class="external">dorgonman@hotmail.com<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<hr/>
+<h2 id="version-history">Version History<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#version-history" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>*5.7.0</p>
+<ul>
+<li>Update to 5.7.0</li>
+</ul>
+<p>*5.6.0</p>
+<ul>
+<li>Update to 5.6.0</li>
+</ul>
+<p>*5.5.0</p>
+<ul>
+<li>Update to 5.5.0</li>
+</ul>
+<p>*5.4.1</p>
+<ul>
+<li>
+<p>[New] Implement Push/Change Scene by SoftClass</p>
+</li>
+<li>
+<p>[New] Implement Push/Change Scene using UserWidget Only, without Create Scene BP Asset</p>
+</li>
+<li>
+<p>[Optimization] include UE_INLINE_GENERATED_CPP_BY_NAME to all .cpp for increase compile time</p>
+</li>
+</ul>
+<p>*5.4.0</p>
+<ul>
+<li>[Refactor] Use TObjectPtr instead of RawPointer</li>
+</ul>
+<p>*5.3.0</p>
+<pre><code>Update to 5.3.0
+</code></pre>
+<p>*5.2.0</p>
+<p>Source\HorizonFramework</p>
+<ul>
+<li>[Refactor] Fix 5.2 warning</li>
+</ul>
+<p>*5.1.0</p>
+<p>Source\HorizonFramework</p>
+<ul>
+<li>[Refactor] Fix 5.1 warning</li>
+</ul>
+<p>*5.0.0</p>
+<p>Source\HorizonFramework</p>
+<ul>
+<li>
+<p>[Refactor] Fix 5.0 warning</p>
+</li>
+<li>
+<p>[New] Add Test.spec and ProxyArchive</p>
+</li>
+<li>
+<p>[BugFix] Fix UE5 GetLoadedPath warning</p>
+</li>
+<li>
+<p>AB#2479 [BugFix] Widget sometimes not removed from viewport when seamless travel to next map</p>
+</li>
+<li>
+<p>AB#2401 [BugFix] Fix UE5 ‘IsPendingKill’ deprecated message</p>
+</li>
+<li>
+<p>AB#2477 [BugFix][HorizonSceneBase] IsTransInFinished and IsTransOutFinished not work as expected</p>
+</li>
+</ul>
+<p>Source\HorizonFrameworkEditor</p>
+<ul>
+<li>[BugFix] Unregister custom class layout when ShutdownModule</li>
+</ul>
+<p>*4.27.0</p>
+<p>Source\HorizonFramework</p>
+<ul>
+<li>
+<p>AB#1867 [New][HorizonSceneBase] Implement ReceiveTransInFinished and ReceiveTransOutFinished</p>
+</li>
+<li>
+<p>AB#1854 [SceneManager] Callback OnAddScene only if Scene exists</p>
+</li>
+<li>
+<p>AB#1854 [New][HorizonSceneManager] Implement OnAddScene callback</p>
+</li>
+<li>
+<p>AB#2091 [BugFix][HorizonGameInstance] Should not auto save if game didn’t use it.</p>
+</li>
+<li>
+<p>[HorizonSceneBase] Add comment to TransOutAnimationName</p>
+</li>
+<li>
+<p>AB#2041 [New][HorizonSceneBase] PlayAnimationReverse when StartTransOut if TransInAnimationName equal to TransOutAnimationName</p>
+</li>
+<li>
+<p>AB#2015 [BugFix][SceneManager] SceneEvent can’t finished if Scene are cached and still running</p>
+</li>
+<li>
+<p>AB#1929 [NEW][SceneManager] Implement SceneCache so cached SceneClass will only spawn single instance and will not create multiple time so improve performance</p>
+</li>
+<li>
+<p>AB#1930 [BugFix] RemoveSceneByWidget should not remove TopScene and should remove Delegate after callback finished</p>
+</li>
+<li>
+<p>Fix tutorial Scene</p>
+</li>
+<li>
+<p>AB#1917 [BugFix][HorizonSceneBase] IsTransInFinished and IsTransOutFinished should check correct Animation name</p>
+</li>
+<li>
+<p>AB#1921 [HorizonSceneEvent] Unused Scene callbacks should not appear in BP</p>
+</li>
+<li>
+<p>AB#1887 [New][UHorizonSceneEvent] InitWidget when try to GetTransInSceneWidget</p>
+</li>
+</ul>
+<p>Source\HorizonFrameworkEditor</p>
+<ul>
+<li>AB#1867 [New][HorizonSceneBase] Implement ReceiveTransInFinished and ReceiveTransOutFinished</li>
+</ul>
+<p>*4.26.0</p>
+<ul>
+<li>
+<p>[BugFix][HorizonSceneManager] OnRemoveScene should call OnPopScene if it is TopScene</p>
+</li>
+<li>
+<p>[BugFix][HorizonSceneManager] RemoveScene and GetSceneByWidget should check SceneStack and SceneEventList</p>
+</li>
+<li>
+<p>[BugFix][HorizonSceneManager] RemoveScene should find target scene from SceneStack</p>
+</li>
+<li>
+<p>[BugFix][HorizonSceneManager] HasScene logic</p>
+</li>
+<li>
+<p>[Refactor][HorizonSceneBase] Set StatusEnum to EHorizonSceneBaseStatusEnum::Init when init</p>
+</li>
+<li>
+<p>[New][HorizonScene] Implement DestroyWidget and set InitWidget to public</p>
+</li>
+<li>
+<p>[Refactor][HorizonSceneManager] Deprecate IsEmpty, use HasScene instead</p>
+</li>
+<li>
+<p>[BugFix][HorizonSceneManager] IsSceneEventRunning should check current event status and refactor IsEmpty</p>
+</li>
+<li>
+<p>[New][UHorizonSceneManagerLibrary] GetSceneManagerWithName will SetActorLabel in editor</p>
+</li>
+<li>
+<p>[New][HorizonFrameworkFunctionLibrary] Implement SetComponentRotationToPlayer for BP simulation</p>
+</li>
+<li>
+<p>[Refactor][HorizonScene] Set Default WidgetComponent DrawSize to 1920x1080</p>
+</li>
+<li>
+<p>[HorizonSceneManager][Refactor] Change PlayerIndex to ControllerID</p>
+</li>
+<li>
+<p>[Refactor] using copy for GetSceneManagerWithName</p>
+</li>
+<li>
+<p>[Refactor] Always spawn DefaultSceneManagerWeakPtr is not exist</p>
+</li>
+<li>
+<p>AB#1780 [BugFix] Move all AHorizonSceneManager to HorizonSceneSystem</p>
+</li>
+</ul>
+<p>*4.25.0</p>
+<ul>
+<li>
+<p>[UHorizonFrameworkFunctionLibrary] Refactor GetPlayerIndex</p>
+</li>
+<li>
+<p>AB#1499 [New][AHorizonSceneManager] Implement IsSceneEventRunning</p>
+</li>
+<li>
+<p>AB#1496 [Refactor][UHorizonSceneEvent] Refactor ProcessTransIn and ProcessTransOut</p>
+</li>
+<li>
+<p>AB#1496 [New][AHorizonSceneManager] Implement IsEmpty: check SceneEventList and SceneStack</p>
+</li>
+<li>
+<p>AB#1495 [New][UHorizonSceneEvent] BlueprintPure for GetTransInScene and GetTransOutScene</p>
+</li>
+<li>
+<p>AB#1486 [New][AHorizonSceneManager] Implement CreateScene that the scene will not be managed by SceneManager</p>
+</li>
+<li>
+<p>AB#1485 [AHorizonSceneManager] SetVisibilityForAllWidget and Adjust EnableWidget Visibility Toggle</p>
+</li>
+<li>
+<p>[Refactor][SceneEvent] Remove Deprecations and remove bGreyOutWhenSceneTransition from PopScene and RemoveScene</p>
+</li>
+<li>
+<p>AB#1484 [Refactor]  IsTransInFinished and IsTransOutFinished should check IsAnyAnimationPlaying by default</p>
+</li>
+<li>
+<p>AB#1479 [BugFix] Fix ChangeScene and PopScene param setup timing</p>
+</li>
+<li>
+<p>AB#1482 [New][UHorizonSceneManagerLibrary] Implement GetSceneManagerWithName</p>
+</li>
+<li>
+<p>AB#1479 [BugFix][HorizonScenePushEvent] Fix PopScene didn’t pop previous scene correctly</p>
+</li>
+<li>
+<p>AB#1333 [New] GetNumSceneEvent</p>
+</li>
+<li>
+<p>AB#1332 [New] bAutoSave flag for ApplicationWillEnterBackground and Shutdown</p>
+</li>
+<li>
+<p>[HorizonSceneEvent] GetTransInSceneWidget and GetTransOutSceneWidget</p>
+</li>
+<li>
+<p>AB#1112 [New] GetDefaultSceneManager should try find SceneManager in level first before spawn one</p>
+</li>
+<li>
+<p>AB#1573 [New][HorizonSceneManager] Implement PushSceneByClass_SingleInstance: Check is SceneClass already exist be fore push new scene</p>
+</li>
+<li>
+<p>[New][HorizonGameInstance] Implement GetLoadingScreenWidget</p>
+</li>
+<li>
+<p>AB#1573 [New][HorizonSceneManager] Implement PushSceneByClass_SingleInstance: Check is SceneClass already exist be fore push new scene</p>
+</li>
+<li>
+<p>[BugFix][HorizonGameInstance] Fix MySaveGame GCAssumption warning</p>
+</li>
+</ul>
+<p>*4.24.0</p>
+<pre><code>New: [HorizonSceneManager] Implement RemoveSceneEvent  
+
+New: [UHorizonFrameworkFunctionLibrary] GetPlayerIndex  
+
+BugFix:[AHorizonSceneBase] OwningObject should come from PlayerIndex  
+
+Refactor:[AHorizonSceneBase] Change IsTransInFinished &amp;&amp; IsTransOutFinished to BlueprintNativeEvent  
+
+Refactor: Adjust naming convention  
+</code></pre>
+<p>*4.23.0</p>
+<pre><code>New: [UHorizonFrameworkFunctionLibrary] ShouldDisplayTouchInterface  
+
+Refactor: [HorizonSceneManager] Implement PlayerIndex for CreateWidget  
+     
+Refactor: Deprecated Default Functions  
+
+BugFix: Fix UHorizonFrameworkFunctionLibrary::GetUserWidgetAnimation Crash  
+</code></pre>
+<p>*4.22.0</p>
+<pre><code>BugFix: UserWidget and Scene are created twice  
+
+New: [HorizonFrameworkFunctionLibrary] SetComponentRotationToPlayer  
+
+BugFix: [HorizonSceneBase] IsUserWidgetAnimationFinished when animName not found  
+</code></pre>
+<p>*4.21.1</p>
+<pre><code>BugFix: UserWidget and Scene are created twice  
+
+New: [HorizonFrameworkFunctionLibrary] SetComponentRotationToPlayer  
+
+BugFix: [HorizonSceneBase] IsUserWidgetAnimationFinished when animName not found  
+</code></pre>
+<p>*4.21.0</p>
+<pre><code>New: [AHorizonSceneManager] Add GetSceneEventList, GetSceneManagerOfClass and GetSceneManagerByTag.  
+
+New: [AHorizonSceneBase] Add OnStartTransIn, OnStartTransOut, OnTopToBack and OnBackToTop Callback.  
+
+New: [AHorizonSceneBase] RegisterAutoGeneratedDefaultEvent for ReceiveBeginPlay, ReceiveEnter, ReceiveStartTransIn, ReceiveOnEnter, ReceiveTickScene, ReceiveExit, ReceiveStartTransOut, ReceiveOnExit and ReceiveEndPlay.  
+
+BugFix: [AHorizonSceneManager] ClearSceneStack when AHorizonSceneManager::EndPlay  
+
+BugFix: [AHorizonSceneBase] AHorizonSceneBase::IsUserWidgetAnimationFinished always true if IsDedicatedServer.  
+
+BugFix: [AHorizonSceneManager] Use PushSceneByClass instead of ChangeScene at BeginPlay.  
+
+BugFix: [UHorizonChangeSceneEvent] ChangeScene TransInFinished called twice.  
+
+BugFix:  [AHorizonScene] Don't SetDrawAtDesiredSize by default for WidgetComponent
+BugFix: [UHorizonGameInstance] SaveGame didn't save properly.
+
+Refactor:  Add Default suffix to functions in UHorizonSceneManagerLibrary, ex:ChangeSceneByClassDefault, PushSceneByClassDefault.
+</code></pre>
+<p>*4.20.0</p>
+<pre><code>Refactor Source Folder
+</code></pre>
+<p>*4.19.2</p>
+<pre><code>New: Param warning in HorizonScene's animation name DropDown list if param name not found.  
+
+Fix: Add WhitelistPlatform for IOS and HTML5.  
+</code></pre>
+<p>*4.19.0</p>
+<pre><code>FIX: HorizonScene's WidgetComponent bugs in VR Mode.  
+</code></pre>
+<p>*4.18.0</p>
+<pre><code>NEW: First Version including core features.
+</code></pre></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>Graph View</h3><div class="graph-outer"><div id="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false}"></div><button id="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div id="global-graph-outer"><div id="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true}"></div></div></div><div class="toc desktop-only"><button type="button" id="toc" class aria-controls="toc-content" aria-expanded="true"><h3>Table of Contents</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="toc-content" class><ul class="overflow"><li class="depth-0"><a href="#system-requirements" data-for="system-requirements">System Requirements</a></li><li class="depth-0"><a href="#installation-guide" data-for="installation-guide">Installation Guide</a></li><li class="depth-0"><a href="#user-guide" data-for="user-guide">User Guide</a></li><li class="depth-0"><a href="#technical-details" data-for="technical-details">Technical Details</a></li><li class="depth-0"><a href="#what-does-your-plugin-dowhat-is-the-intent-of-your-plugin" data-for="what-does-your-plugin-dowhat-is-the-intent-of-your-plugin">What does your plugin do/What is the intent of your plugin</a></li><li class="depth-0"><a href="#user-guide-1" data-for="user-guide-1">User Guide</a></li><li class="depth-0"><a href="#contact-and-support" data-for="contact-and-support">Contact and Support</a></li><li class="depth-0"><a href="#version-history" data-for="version-history">Version History</a></li></ul></div></div><div class="backlinks"><h3>Backlinks</h3><ul class="overflow"><li><a href="./" class="internal">HorizonUIPluginDemo Technical Release</a></li></ul></div></div><footer class><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v4.4.0</a> © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer></div></div></body><script type="application/javascript">function c(){let t=this.parentElement;t.classList.toggle("is-collapsed");let l=t.classList.contains("is-collapsed")?this.scrollHeight:t.scrollHeight;t.style.maxHeight=l+"px";let o=t,e=t.parentElement;for(;e;){if(!e.classList.contains("callout"))return;let n=e.classList.contains("is-collapsed")?e.scrollHeight:e.scrollHeight+o.scrollHeight;e.style.maxHeight=n+"px",o=e,e=e.parentElement}}function i(){let t=document.getElementsByClassName("callout is-collapsible");for(let s of t){let l=s.firstElementChild;if(l){l.addEventListener("click",c),window.addCleanup(()=>l.removeEventListener("click",c));let e=s.classList.contains("is-collapsed")?l.scrollHeight:s.scrollHeight;s.style.maxHeight=e+"px"}}}document.addEventListener("nav",i);window.addEventListener("resize",i);
+</script><script type="module">
+          let mermaidImport = undefined
+          document.addEventListener('nav', async () => {
+            if (document.querySelector("code.mermaid")) {
+              mermaidImport ||= await import('https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.7.0/mermaid.esm.min.mjs')
+              const mermaid = mermaidImport.default
+              const darkMode = document.documentElement.getAttribute('saved-theme') === 'dark'
+              mermaid.initialize({
+                startOnLoad: false,
+                securityLevel: 'loose',
+                theme: darkMode ? 'dark' : 'default'
+              })
+
+              await mermaid.run({
+                querySelector: '.mermaid'
+              })
+            }
+          });
+          </script><script src="./postscript.js" type="module"></script></html>
