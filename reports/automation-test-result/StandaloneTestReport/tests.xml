@@ -1,4 +1,0 @@
-<?xml version='1.0' encoding='utf-8'?>
-<testsuite name="Unreal Automation" tests="1" failures="0" errors="0" skipped="0" time="0.002547">
-  <testcase classname="Plugin.HorizonFramework.HorizonFrameworkTest" name="Plugin.HorizonFramework.HorizonFrameworkTest.HelloWorld" time="0.002547" />
-</testsuite>
