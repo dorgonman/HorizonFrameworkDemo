@@ -41,7 +41,7 @@ pipeline {
         booleanParam name: 'bBuildPluginSwitch2', defaultValue: false, description: 'Build Switch 2 Plugin Shipping'
 
         // === Test ===
-        booleanParam name: 'bRunTestWin64Standalone', defaultValue: false, description: 'Run Win64 standalone tests'
+        booleanParam name: 'bRunTestWin64Standalone', defaultValue: true, description: 'Run Win64 standalone tests'
 
         // === Artifact archival ===
         booleanParam name: 'bArchiveTar', defaultValue: true, description: 'Archive PrepareDeploy tar/manifest artifacts. Disable for fast test/coverage iterations.'
