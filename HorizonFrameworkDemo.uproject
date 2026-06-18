@@ -18,6 +18,10 @@
 			"Name": "HorizonFrameworkPlugin",
 			"Enabled": true,
 			"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/content/97c3314ed07145c1920ca72f12396e96"
+		},
+		{
+			"Name": "Fab",
+			"Enabled": false
 		}
 	]
 }
