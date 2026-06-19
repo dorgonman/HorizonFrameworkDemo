@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Site BuildName="Windows" BuildStamp="0001.01.01-00.00.00" Generator="UE4_Automation_System" CompilerName="" CompilerVersion="" OSName="Windows" Hostname="DESKTOP-576FRHA" OSRelease="11" OSVersion="10.0.26200" OSPlatform="Windows" Is64Bits="1" VendorString="AMD64 Family 25 Model 33 Stepping 0, AuthenticAMD" VendorID="AMD64 Family 25 Model 33 Stepping 0, AuthenticAMD" FamilyID="" ModelID="" ProcessorCacheSize="" NumberOfLogicalCPU="32" NumberOfPhysicalCPU="" TotalVirtualMemory="" TotalPhysicalMemory="" LogicalProcessorsPerPhysical="" ProcessorClockFrequency="">
+  <Testing>
+    <StartDateTime>0001.01.01-00.00.00</StartDateTime>
+    <StartTestTime>0</StartTestTime>
+    <EndDateTime>0001.01.01-00.00.00</EndDateTime>
+    <EndTestTime>0</EndTestTime>
+    <ElapsedMinutes>0.00</ElapsedMinutes>
+    <TestList>
+      <Test>Plugin.HorizonFramework.HorizonFrameworkTest.HelloWorld</Test>
+    </TestList>
+    <Test Status="passed">
+      <Name>Plugin.HorizonFramework.HorizonFrameworkTest.HelloWorld</Name>
+      <Path>HelloWorld</Path>
+      <FullName>Plugin.HorizonFramework.HorizonFrameworkTest.HelloWorld</FullName>
+      <Results>
+        <NamedMeasurement type="numeric/double" name="Execution Time">
+          <Value>0.0026848018169403076</Value>
+        </NamedMeasurement>
+        <NamedMeasurement type="text/string" name="Completion Status">
+          <Value>passed</Value>
+        </NamedMeasurement>
+        <NamedMeasurement type="numeric/int" name="Warnings">
+          <Value>0</Value>
+        </NamedMeasurement>
+        <NamedMeasurement type="numeric/int" name="Errors">
+          <Value>0</Value>
+        </NamedMeasurement>
+        <Measurement>
+          <Value />
+        </Measurement>
+      </Results>
+      <Labels />
+      <Status>passed</Status>
+      <CompletionStatus>passed</CompletionStatus>
+      <ExecutionTime>0.0026848018169403076</ExecutionTime>
+      <Command>Unreal Automation</Command>
+      <StartTime>2026-06-17T15:07:23Z</StartTime>
+      <EndTime>2026-06-17T15:07:23Z</EndTime>
+    </Test>
+  </Testing>
+</Site>

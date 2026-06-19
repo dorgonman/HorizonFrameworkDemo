@@ -1,0 +1,44 @@
+{
+	"devices": [
+		{
+			"deviceName": "redacted-device",
+			"instance": "redacted-instance",
+			"instanceName": "redacted-instance",
+			"platform": "Windows",
+			"oSVersion": "Windows (redacted)",
+			"model": "redacted-model",
+			"gPU": "redacted-gpu",
+			"cPUModel": "redacted-cpu",
+			"rAMInGB": "redacted",
+			"renderMode": "D3D12_SM5",
+			"rHI": "D3D12 (SM5)",
+			"appInstanceLog": ""
+		}
+	],
+	"reportCreatedOn": "2026.06.17-15.07.05",
+	"succeeded": 1,
+	"succeededWithWarnings": 0,
+	"failed": 0,
+	"notRun": 0,
+	"inProcess": 0,
+	"totalDuration": 0.0026848018169403076,
+	"comparisonExported": false,
+	"comparisonExportDirectory": "[redacted-path]",
+	"tests": [
+		{
+			"testDisplayName": "HelloWorld",
+			"fullTestPath": "Plugin.HorizonFramework.HorizonFrameworkTest.HelloWorld",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"B16F54EA4396FABD593D17867FD2BC78"
+			],
+			"duration": 0.0026848018169403076,
+			"dateTime": "2026.06.17-15.07.04",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		}
+	]
+}
